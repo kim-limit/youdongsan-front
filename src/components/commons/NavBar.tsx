@@ -15,7 +15,7 @@ const useStyles = makeStyles({
     position: "fixed",
     top: "0px",
     zIndex: "100",
-    height: "20vh",
+    height: "15vh",
     width: "100vw",
     padding: "0 200px 0 200px",
     boxSizing: "border-box",

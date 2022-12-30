@@ -15,19 +15,21 @@ export const Fullpage = () => (
             <MainContainer></MainContainer>
           </div>
           <div className="section">
-            <p>Section 1 (welcome to fullpage.js)</p>
-            <button onClick={() => fullpageApi.moveSectionDown()}>
-              Click me to move down
-            </button>
-            <p
-              dangerouslySetInnerHTML={{
-                __html: `<p><span style="color:#f1c40f">안녕하세요</span></p>
+            <MainContainer>
+              <p>Section 1 (welcome to fullpage.js)</p>
+              <button onClick={() => fullpageApi.moveSectionDown()}>
+                Click me to move down
+              </button>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: `<p><span style="color:#f1c40f">안녕하세요</span></p>
                 <p><strong>지금 드릴 말씀을 전하게</strong></p>
                 <p>&nbsp;</p>
                 <p>ㅇㄹㅈㅇㄹ<span style="background-color:#2ecc71">ㅈㅇㄹㅈㅇㄹㅈㅇㄹ</span></p>
                 <p>ㅋㄷㅋㄷ</p>`,
-              }}
-            ></p>
+                }}
+              ></p>
+            </MainContainer>
           </div>
         </ReactFullpage.Wrapper>
       );

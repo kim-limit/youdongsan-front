@@ -6,11 +6,8 @@ import { Grid } from "@mui/material";
 const useStyles = makeStyles({
   root: {
     background: "#404040",
-    border: 0,
-    borderRadius: 3,
-    color: "black",
     height: "100vh",
-    padding: "200px 200px",
+    padding: "180px 200px 100px 200px",
   },
 });
 
@@ -22,7 +19,9 @@ export const MainContainer = (props: MainContainerProps) => {
   const classes = useStyles();
   return (
     <Grid container className={classes.root}>
-      {props.children}
+      <div style={{ width: "100%", height: "100%", backgroundColor: "white" }}>
+        {props.children}
+      </div>
     </Grid>
   );
 };
