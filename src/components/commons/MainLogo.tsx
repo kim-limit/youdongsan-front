@@ -14,7 +14,8 @@ const useStyles = makeStyles({
   inner: {
     background: "black",
     width: "253px",
-    height: "80px",
+    height: "90%",
+    lineHeight: "100%",
     color: "white",
     fontSize: "80px",
     fontWeight: "bold",

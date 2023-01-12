@@ -1,13 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import ReactFullpage from "@fullpage/react-fullpage";
-import { MainContainer } from "./commons/MainContainer";
+import { MainContainer } from "../components/commons/MainContainer";
+import { Link } from "@material-ui/core";
+import { Footer } from "../components/commons/Footer";
 
 export const Fullpage = () => (
   <ReactFullpage
     //fullpage options
     licenseKey={"YOUR_KEY_HERE"}
-    scrollingSpeed={1000} /* Options here */
+    scrollingSpeed={300} /* Options here */
     render={({ state, fullpageApi }) => {
       return (
         <ReactFullpage.Wrapper>
@@ -17,7 +19,7 @@ export const Fullpage = () => (
           <div className="section">
             <MainContainer>
               <p>Section 1 (welcome to fullpage.js)</p>
-              <button onClick={() => fullpageApi.moveSectionDown()}>
+              <button onClick={() => fullpageApi.moveTo("first", 0)}>
                 Click me to move down
               </button>
               <p
@@ -30,6 +32,9 @@ export const Fullpage = () => (
                 }}
               ></p>
             </MainContainer>
+          </div>
+          <div className="section">
+            <Footer />
           </div>
         </ReactFullpage.Wrapper>
       );
