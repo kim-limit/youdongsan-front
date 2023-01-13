@@ -1,33 +1,27 @@
-import { Box } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles({
   root: {
-    height: "90px",
-    width: "300px",
-    background: "white",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  inner: {
-    background: "black",
-    width: "253px",
-    height: "90%",
-    lineHeight: "100%",
-    color: "white",
-    fontSize: "80px",
+    height: "70px",
+    width: "200px",
+    fontSize: "60px",
     fontWeight: "bold",
-    letterSpacing: "15px",
+    color: "white",
+    cursor: "pointer",
   },
 });
 
 export const MainLogo = () => {
   const classes = useStyles();
+  const navigate = useNavigate();
+  const buttonHandler = () => {
+    navigate("/");
+  };
   return (
-    <Box className={classes.root}>
-      <Box className={classes.inner}>{"유동산"}</Box>
-    </Box>
+    <div className={classes.root} onClick={buttonHandler}>
+      {"유동산"}{" "}
+    </div>
   );
 };

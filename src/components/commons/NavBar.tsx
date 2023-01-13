@@ -4,30 +4,34 @@ import { ButtonContainer } from "./ButtonContainer";
 import { MainLogo } from "./MainLogo";
 
 const useStyles = makeStyles({
-  inner: {
-    display: "flex",
-    width: "100%",
-    height: "100%",
-    justifyContent: "space-between",
-    alignItems: "center",
-  },
   root: {
     position: "fixed",
     top: "0px",
     zIndex: "100",
-    height: "15vh",
+    height: "120px",
     width: "100vw",
-    padding: "0 200px 0 200px",
     boxSizing: "border-box",
   },
+  inner: {
+    display: "flex",
+    maxWidth: "1240px",
+    margin: "0 auto",
+    height: "100%",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
 });
-export const NavBar = () => {
+
+interface INavBarProps {
+  path: string;
+}
+export const NavBar = ({ path }: INavBarProps) => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
       <div className={classes.inner}>
         <MainLogo />
-        <ButtonContainer />
+        <ButtonContainer path={path} />
       </div>
     </div>
   );

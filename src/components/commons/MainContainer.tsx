@@ -1,14 +1,13 @@
 import React from "react";
 import { makeStyles } from "@mui/styles";
 import { Grid } from "@mui/material";
-import { theme } from "../../theme";
 
 const useStyles = makeStyles({
   root: {
-    // background: theme.palette.primary.main,
     height: "100vh",
-    padding: "180px 200px 100px 200px",
-    margin: "0px",
+    maxWidth: "1240px",
+    paddingTop: "180px",
+    margin: "0 auto",
   },
 });
 

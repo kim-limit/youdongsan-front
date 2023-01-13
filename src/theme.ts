@@ -7,7 +7,7 @@ export const theme = createMuiTheme({
       "@global": {
         body: {
           backgroundColor: "#404040",
-          fontFamily: "Poppins",
+          // fontFamily: "Poppins",
         },
       },
     },

@@ -4,6 +4,7 @@ import ReactFullpage from "@fullpage/react-fullpage";
 import { MainContainer } from "../components/commons/MainContainer";
 import { Link } from "@material-ui/core";
 import { Footer } from "../components/commons/Footer";
+import { NavBar } from "../components/commons/NavBar";
 
 export const Fullpage = () => (
   <ReactFullpage
@@ -13,6 +14,7 @@ export const Fullpage = () => (
     render={({ state, fullpageApi }) => {
       return (
         <ReactFullpage.Wrapper>
+          <NavBar path={"유동산"} />
           <div className="section">
             <MainContainer></MainContainer>
           </div>
@@ -34,6 +36,7 @@ export const Fullpage = () => (
             </MainContainer>
           </div>
           <div className="section">
+            <div style={{ height: "calc(100vh - 373px)" }}></div>
             <Footer />
           </div>
         </ReactFullpage.Wrapper>
