@@ -25,7 +25,7 @@ const useStyles = makeStyles({
       width: "100%",
       transform: "scaleX(0)",
       height: "7px",
-      top: "29px",
+      top: "31px",
       left: 0,
       backgroundColor: "#4EC5D6",
       transformOrigin: "center",
