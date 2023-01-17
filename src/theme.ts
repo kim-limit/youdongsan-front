@@ -7,20 +7,20 @@ export const theme = createMuiTheme({
       "@global": {
         body: {
           backgroundColor: "#404040",
-          // fontFamily: "Poppins",
+          color: "white",
         },
       },
     },
   },
-  //   palette: {
-  //     primary: {
-  //       main: "#404040",
-  //     },
-  //     secondary: {
-  //       main: "#4EC5D6",
-  //     },
+  // palette: {
+  //   primary: {
+  //     main: "white",
   //   },
-  //   typography: {
-  //     fontFamily: [`"Poppins, sans-serif"`].join(","),
+  //   secondary: {
+  //     main: "#4EC5D6",
   //   },
+  // },
+  // typography: {
+  //   fontFamily: [`"Poppins, sans-serif"`].join(","),
+  // },
 });
