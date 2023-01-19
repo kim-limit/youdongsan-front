@@ -5,7 +5,7 @@ import { Grid } from "@mui/material";
 const useStyles = makeStyles({
   root: {
     height: "100vh",
-    maxWidth: "1240px",
+    maxWidth: "1440px",
     paddingTop: "180px",
     margin: "0 auto",
   },

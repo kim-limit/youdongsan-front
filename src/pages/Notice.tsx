@@ -5,7 +5,7 @@ import { NavBar } from "../components/commons/NavBar";
 export const Notice = () => {
   return (
     <>
-      <NavBar path={"공지사항"} />
+      {/* <NavBar path={"공지사항"} /> */}
       <MainContainer></MainContainer>;
     </>
   );

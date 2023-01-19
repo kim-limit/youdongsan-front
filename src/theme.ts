@@ -5,22 +5,19 @@ export const theme = createMuiTheme({
   overrides: {
     MuiCssBaseline: {
       "@global": {
+        "@font-face": {
+          fontFamily: "Chosunilbo_myungjo",
+          src: `url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff")
+            format("woff")`,
+          fontWeight: "normal",
+          fontStyle: "normal",
+        },
         body: {
-          backgroundColor: "#404040",
+          backgroundColor: "#333333",
           color: "white",
+          fontFamily: "Chosunilbo_myungjo",
         },
       },
     },
   },
-  // palette: {
-  //   primary: {
-  //     main: "white",
-  //   },
-  //   secondary: {
-  //     main: "#4EC5D6",
-  //   },
-  // },
-  // typography: {
-  //   fontFamily: [`"Poppins, sans-serif"`].join(","),
-  // },
 });

@@ -3,18 +3,15 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles({
-  root: {
-    width: "400px",
-    display: "flex",
-    justifyContent: "space-between",
-  },
   btn: {
-    display: "inline-block",
     position: "relative",
     color: "white",
-    fontSize: "25px",
+    fontSize: "40px",
+    height: "50px",
+    width: "360px",
+    margin: "5px",
+    padding: "0 20px",
     backgroundColor: "transparent",
-    border: "0",
     "&:hover": {
       fontWeight: "bold",
       cursor: "pointer",
@@ -24,60 +21,61 @@ const useStyles = makeStyles({
       position: "absolute",
       width: "100%",
       transform: "scaleX(0)",
-      height: "7px",
-      top: "31px",
+      height: "100%",
+      top: 0,
       left: 0,
       backgroundColor: "#4EC5D6",
-      transformOrigin: "center",
+      transformOrigin: "left",
       transition: "transform 0.25s ease-out",
+      zIndex: "-1",
     },
     "&:hover:after": {
       transform: "scaleX(1)",
-      transformOrigin: "center",
+      transformOrigin: "left",
     },
   },
   underLine: {
-    textDecoration: "underline",
-    textDecorationColor: "#4EC5D6",
-    textDecorationThickness: "8px",
     fontWeight: "bold",
+    "&:after": {
+      transform: "scaleX(1)",
+    },
   },
 });
 
-interface IButtonContainerProps {
-  path: string;
+interface IMenuListProps {
+  text: string;
 }
 
-export const ButtonContainer = ({ path }: IButtonContainerProps) => {
+export const MenuList = ({ text }: IMenuListProps) => {
   const classes = useStyles();
-  const buttonList = [
-    { text: "유동산", path: "/" },
-    { text: "회사 소개", path: "/" },
-    { text: "공지사항", path: "/notice" },
-    { text: "FAQ", path: "/faq" },
-  ];
-  const [selected, setSelected] = useState(path);
   const navigate = useNavigate();
-  const buttonHandler = (text: string, path: string) => {
-    setSelected(text);
+
+  const buttonList = [
+    { text: "HOME", path: "/" },
+    { text: "ABOUT US", path: "/" },
+    { text: "NOTICE", path: "/notice" },
+    { text: "FAQ", path: "/faq" },
+    { text: "CONTACT US", path: "/" },
+  ];
+  const navigateHandler = (path: string) => {
     navigate(path);
   };
   return (
-    <div className={classes.root}>
+    <>
       {buttonList.map((item) => {
         return (
           <p
             className={`${classes.btn} ${
-              item.text === selected ? classes.underLine : ""
+              item.text === text ? classes.underLine : ""
             }`}
             onClick={() => {
-              buttonHandler(item.text, item.path);
+              navigateHandler(item.path);
             }}
           >
             {item.text}
           </p>
         );
       })}
-    </div>
+    </>
   );
 };

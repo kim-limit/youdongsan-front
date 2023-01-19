@@ -5,7 +5,7 @@ import { NavBar } from "../components/commons/NavBar";
 export const Faq = () => {
   return (
     <>
-      <NavBar path={"FAQ"} />
+      {/* <NavBar path={"FAQ"} /> */}
       <MainContainer></MainContainer>;
     </>
   );

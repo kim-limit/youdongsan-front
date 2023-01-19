@@ -4,12 +4,16 @@ import { useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles({
   root: {
-    height: "70px",
-    width: "200px",
+    height: "90px",
+    width: "546px",
     fontSize: "60px",
-    fontWeight: "bold",
     color: "white",
     cursor: "pointer",
+    letterSpacing: "20px",
+    paddingLeft: "30px",
+  },
+  head: {
+    color: "#4EC5D6",
   },
 });
 
@@ -21,7 +25,8 @@ export const MainLogo = () => {
   };
   return (
     <div className={classes.root} onClick={buttonHandler}>
-      {"유동산"}{" "}
+      <span className={classes.head}>{"Y"}</span>
+      <span>{"OUDONGSAN"}</span>
     </div>
   );
 };
