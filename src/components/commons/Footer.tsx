@@ -1,5 +1,4 @@
 import { makeStyles } from "@mui/styles";
-import React from "react";
 import Apple from "../../assets/Apple.svg";
 import PlayStore from "../../assets/PlayStore.svg";
 import Insta from "../../assets/Insta.svg";

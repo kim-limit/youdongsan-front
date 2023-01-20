@@ -1,15 +1,14 @@
 import { useState } from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 import { MainContainer } from "../components/commons/MainContainer";
-import { MainApp } from "../components/commons/home/MainApp";
+import { FirstContent } from "../components/commons/home/FirstContent";
 import { BackgroundContainer } from "../components/commons/home/BackgroundContainer";
-import { Introduce } from "../components/commons/home/Introduce";
+import { SecondContent } from "../components/commons/home/SecondContent";
+import { ThirdContent } from "../components/commons/home/ThirdContent";
+import { FourthContent } from "../components/commons/home/FourthContent";
+import { LastContent } from "../components/commons/home/LastContent";
 
 export const HomePage = () => {
-  const [isToggle, setIsToggle] = useState(false);
-  const toggleHandler = () => {
-    setIsToggle(!isToggle);
-  };
   return (
     <ReactFullpage
       //fullpage options
@@ -20,13 +19,26 @@ export const HomePage = () => {
           <ReactFullpage.Wrapper>
             <div className="section">
               <MainContainer>
-                <MainApp />
+                <FirstContent />
               </MainContainer>
             </div>
             <div className="section">
               <BackgroundContainer>
-                <Introduce />
+                <SecondContent />
               </BackgroundContainer>
+            </div>
+            <div className="section">
+              <MainContainer>
+                <ThirdContent />
+              </MainContainer>
+            </div>
+            <div className="section">
+              <MainContainer>
+                <FourthContent />
+              </MainContainer>
+            </div>
+            <div className="section">
+              <LastContent />
             </div>
             <div className="section">
               <MainContainer>
@@ -44,9 +56,6 @@ export const HomePage = () => {
                   }}
                 ></p>
               </MainContainer>
-            </div>
-            <div className="section">
-              <div style={{ height: "calc(100vh - 373px)" }}></div>
             </div>
           </ReactFullpage.Wrapper>
         );

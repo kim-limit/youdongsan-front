@@ -17,7 +17,7 @@ const useStyles = makeStyles({
   },
 });
 
-export interface IBackgroundContainerProps {
+interface IBackgroundContainerProps {
   children?: React.ReactNode;
 }
 

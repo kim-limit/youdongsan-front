@@ -5,8 +5,12 @@ import { Grid } from "@mui/material";
 const useStyles = makeStyles({
   root: {
     height: "100vh",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
     maxWidth: "1440px",
     margin: "0 auto",
+    padding: "0 40px",
   },
 });
 

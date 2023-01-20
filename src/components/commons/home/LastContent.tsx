@@ -1,7 +1,6 @@
 import { Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import React from "react";
-import MainAppImg from "../../../assets/MainAppImg.png";
+import AppImg2 from "../../../assets/AppImg2.png";
 
 const useStyles = makeStyles({
   root: {
@@ -9,18 +8,19 @@ const useStyles = makeStyles({
     display: "flex",
     justifyContent: "center",
     alignItems: "end",
+    backgroundColor: "#4EC5D6",
   },
   img: {
-    width: "50%",
-    height: "90%",
+    width: "80%",
+    height: "100%",
   },
 });
 
-export const MainApp = () => {
+export const LastContent = () => {
   const classes = useStyles();
   return (
     <Grid item xs={12} className={classes.root}>
-      <img className={classes.img} src={MainAppImg} />
+      <img className={classes.img} src={AppImg2} />
     </Grid>
   );
 };
