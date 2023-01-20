@@ -12,15 +12,16 @@ import { MenuContainer } from "./components/commons/MenuContainer";
 
 function App() {
   const [isToggle, setIsToggle] = useState(false);
-  const toggleHandler = () => {
+  const handleIsToggle = () => {
     setIsToggle(!isToggle);
   };
+
   return (
     <StylesProvider injectFirst>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <NavBar isToggle={isToggle} toggleHandler={toggleHandler} />
-        <MenuContainer isToggle={isToggle} text={"HOME"} />
+        <NavBar isToggle={isToggle} handleIsToggle={handleIsToggle} />
+        <MenuContainer isToggle={isToggle} handleIsToggle={handleIsToggle} />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="notice" element={<NoticePage />} />

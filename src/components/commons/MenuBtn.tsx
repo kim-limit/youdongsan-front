@@ -17,14 +17,14 @@ const useStyles = makeStyles({
 
 interface IMenuBtnProps {
   isToggle: boolean;
-  toggleHandler: () => void;
+  handleIsToggle: () => void;
 }
 
-export const MenuBtn = ({ isToggle, toggleHandler }: IMenuBtnProps) => {
+export const MenuBtn = ({ isToggle, handleIsToggle }: IMenuBtnProps) => {
   const classes = useStyles();
   return (
-    <div className={classes.root} onClick={toggleHandler}>
-      <img className={classes.btn} src={isToggle ? Close : Menu} />
+    <div className={classes.root} onClick={handleIsToggle}>
+      <img className={classes.btn} src={isToggle ? Close : Menu} alt={"none"} />
     </div>
   );
 };

@@ -22,14 +22,17 @@ const useStyles = makeStyles({
 
 interface IMenuContainerProps {
   isToggle: boolean;
-  text: string;
+  handleIsToggle: () => void;
 }
 
-export const MenuContainer = ({ isToggle, text }: IMenuContainerProps) => {
+export const MenuContainer = ({
+  isToggle,
+  handleIsToggle,
+}: IMenuContainerProps) => {
   const classes = useStyles();
   return (
     <div className={`${isToggle ? classes.onClick : classes.root}`}>
-      <MenuList text={text} />
+      <MenuList handleIsToggle={handleIsToggle} />
     </div>
   );
 };

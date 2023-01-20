@@ -1,5 +1,5 @@
 import { makeStyles } from "@mui/styles";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles({
   btn: {
@@ -42,22 +42,23 @@ const useStyles = makeStyles({
 });
 
 interface IMenuListProps {
-  text: string;
+  handleIsToggle: () => void;
 }
 
-export const MenuList = ({ text }: IMenuListProps) => {
+export const MenuList = ({ handleIsToggle }: IMenuListProps) => {
   const classes = useStyles();
   const navigate = useNavigate();
-
+  const location = useLocation();
   const buttonList = [
     { text: "HOME", path: "/" },
-    { text: "ABOUT US", path: "/" },
+    { text: "ABOUT US", path: "/about" },
     { text: "NOTICE", path: "/notice" },
     { text: "FAQ", path: "/faq" },
-    { text: "CONTACT US", path: "/" },
+    { text: "CONTACT US", path: "/contact" },
   ];
-  const navigateHandler = (path: string) => {
+  const handleNavigate = (path: string) => {
     navigate(path);
+    handleIsToggle();
   };
   return (
     <>
@@ -65,10 +66,10 @@ export const MenuList = ({ text }: IMenuListProps) => {
         return (
           <p
             className={`${classes.btn} ${
-              item.text === text ? classes.underLine : ""
+              item.path === location.pathname ? classes.underLine : ""
             }`}
             onClick={() => {
-              navigateHandler(item.path);
+              handleNavigate(item.path);
             }}
           >
             {item.text}

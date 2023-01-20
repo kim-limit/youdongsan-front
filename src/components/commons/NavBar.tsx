@@ -23,15 +23,15 @@ const useStyles = makeStyles({
 
 interface INavBarProps {
   isToggle: boolean;
-  toggleHandler: () => void;
+  handleIsToggle: () => void;
 }
 
-export const NavBar = ({ isToggle, toggleHandler }: INavBarProps) => {
+export const NavBar = ({ isToggle, handleIsToggle }: INavBarProps) => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
       <div className={classes.inner}>
-        <MenuBtn isToggle={isToggle} toggleHandler={toggleHandler} />
+        <MenuBtn isToggle={isToggle} handleIsToggle={handleIsToggle} />
         <MainLogo />
       </div>
     </div>

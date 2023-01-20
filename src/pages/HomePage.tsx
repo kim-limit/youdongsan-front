@@ -1,12 +1,11 @@
-import { useState } from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 import { MainContainer } from "../components/commons/MainContainer";
-import { FirstContent } from "../components/commons/home/FirstContent";
-import { BackgroundContainer } from "../components/commons/home/BackgroundContainer";
-import { SecondContent } from "../components/commons/home/SecondContent";
-import { ThirdContent } from "../components/commons/home/ThirdContent";
-import { FourthContent } from "../components/commons/home/FourthContent";
-import { LastContent } from "../components/commons/home/LastContent";
+import { FirstContent } from "../components/home/FirstContent";
+import { BackgroundContainer } from "../components/home/BackgroundContainer";
+import { SecondContent } from "../components/home/SecondContent";
+import { ThirdContent } from "../components/home/ThirdContent";
+import { FourthContent } from "../components/home/FourthContent";
+import { LastContent } from "../components/home/LastContent";
 
 export const HomePage = () => {
   return (
@@ -23,7 +22,7 @@ export const HomePage = () => {
               </MainContainer>
             </div>
             <div className="section">
-              <BackgroundContainer>
+              <BackgroundContainer isImg={true}>
                 <SecondContent />
               </BackgroundContainer>
             </div>
@@ -38,7 +37,9 @@ export const HomePage = () => {
               </MainContainer>
             </div>
             <div className="section">
-              <LastContent />
+              <BackgroundContainer isImg={false}>
+                <LastContent />
+              </BackgroundContainer>
             </div>
             <div className="section">
               <MainContainer>
