@@ -1,3 +1,5 @@
 export interface INoticeProps {
-  text: string;
+  title: string;
+  content: string;
+  writer: string;
 }
