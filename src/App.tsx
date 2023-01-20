@@ -1,10 +1,10 @@
 import { StylesProvider } from "@mui/styles";
-import React, { useState } from "react";
+import { useState } from "react";
 import { theme } from "./theme";
 import { Route, Routes } from "react-router-dom";
-import { Faq } from "./pages/Faq";
-import { Fullpage } from "./pages/FullPage";
-import { Notice } from "./pages/Notice";
+import { FaqPage } from "./pages/FaqPage";
+import { HomePage } from "./pages/HomePage";
+import { NoticePage } from "./pages/NoticePage";
 import { CssBaseline, ThemeProvider } from "@material-ui/core";
 import { NavBar } from "./components/commons/NavBar";
 import { Footer } from "./components/commons/Footer";
@@ -22,9 +22,9 @@ function App() {
         <NavBar isToggle={isToggle} toggleHandler={toggleHandler} />
         <MenuContainer isToggle={isToggle} text={"HOME"} />
         <Routes>
-          <Route path="/" element={<Fullpage />} />
-          <Route path="notice" element={<Notice />} />
-          <Route path="faq" element={<Faq />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="notice" element={<NoticePage />} />
+          <Route path="faq" element={<FaqPage />} />
         </Routes>
         <Footer />
       </ThemeProvider>

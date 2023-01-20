@@ -1,19 +1,18 @@
 import { makeStyles } from "@mui/styles";
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import Logo from "../.././assets/Logo.png";
 
 const useStyles = makeStyles({
   root: {
-    height: "90px",
-    width: "546px",
-    fontSize: "60px",
-    color: "white",
+    height: "30px",
+    width: "420px",
     cursor: "pointer",
-    letterSpacing: "20px",
     paddingLeft: "30px",
   },
-  head: {
-    color: "#4EC5D6",
+  img: {
+    width: "100%",
+    height: "100%",
   },
 });
 
@@ -25,8 +24,7 @@ export const MainLogo = () => {
   };
   return (
     <div className={classes.root} onClick={buttonHandler}>
-      <span className={classes.head}>{"Y"}</span>
-      <span>{"OUDONGSAN"}</span>
+      <img className={classes.img} src={Logo} />
     </div>
   );
 };

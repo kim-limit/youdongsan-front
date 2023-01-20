@@ -5,8 +5,8 @@ import { makeStyles } from "@mui/styles";
 const useStyles = makeStyles({
   root: {
     backgroundColor: "#333333",
-    height: "40px",
-    width: "30px",
+    height: "30px",
+    width: "40px",
     cursor: "pointer",
   },
   btn: {

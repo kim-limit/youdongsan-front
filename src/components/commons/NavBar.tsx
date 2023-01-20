@@ -10,6 +10,7 @@ const useStyles = makeStyles({
     zIndex: "100",
     height: "180px",
     width: "100vw",
+    padding: "0 40px",
   },
   inner: {
     display: "flex",
