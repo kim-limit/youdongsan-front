@@ -8,7 +8,7 @@ const useStyles = makeStyles({
     position: "fixed",
     bottom: "0px",
     zIndex: "100",
-    height: "150px",
+    height: "168px",
     width: "100vw",
     padding: "0 40px",
   },
@@ -22,7 +22,7 @@ const useStyles = makeStyles({
   },
   btns: {
     display: "flex",
-    width: "100px",
+    width: "88px",
     justifyContent: "space-between",
   },
   copyright: {

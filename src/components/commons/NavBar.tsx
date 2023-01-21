@@ -7,7 +7,7 @@ const useStyles = makeStyles({
     position: "fixed",
     top: "0px",
     zIndex: "100",
-    height: "180px",
+    height: "177px",
     width: "100vw",
     padding: "0 40px",
   },

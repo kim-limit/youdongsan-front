@@ -8,7 +8,7 @@ const useStyles = makeStyles({
     fontSize: "40px",
   },
   head: {
-    paddingTop: "40px",
+    paddingTop: "62px",
     fontSize: "60px",
   },
   highlight: {

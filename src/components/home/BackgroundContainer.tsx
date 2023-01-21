@@ -18,7 +18,7 @@ const useStyles = makeStyles({
     backgroundRepeat: "no-repeat",
   },
   color: {
-    backgroundColor: "#4EC5D6",
+    backgroundColor: "#4CBCCC",
   },
 });
 
