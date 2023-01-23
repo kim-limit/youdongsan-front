@@ -9,6 +9,7 @@ import { CssBaseline, ThemeProvider } from "@material-ui/core";
 import { NavBar } from "./components/commons/NavBar";
 import { Footer } from "./components/commons/Footer";
 import { MenuContainer } from "./components/commons/MenuContainer";
+import { AboutUsPage } from "./pages/AboutUsPage";
 
 function App() {
   const [isToggle, setIsToggle] = useState(false);
@@ -24,8 +25,9 @@ function App() {
         <MenuContainer isToggle={isToggle} handleIsToggle={handleIsToggle} />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="notice" element={<NoticePage />} />
-          <Route path="faq" element={<FaqPage />} />
+          <Route path="/about" element={<AboutUsPage />} />
+          <Route path="/notice" element={<NoticePage />} />
+          <Route path="/faq" element={<FaqPage />} />
         </Routes>
         <Footer />
       </ThemeProvider>
