@@ -10,6 +10,7 @@ import { NavBar } from "./components/commons/NavBar";
 import { Footer } from "./components/commons/Footer";
 import { MenuContainer } from "./components/commons/MenuContainer";
 import { AboutUsPage } from "./pages/AboutUsPage";
+import { ContactUsPage } from "./pages/ContactUsPage";
 
 function App() {
   const [isToggle, setIsToggle] = useState(false);
@@ -28,6 +29,7 @@ function App() {
           <Route path="/about" element={<AboutUsPage />} />
           <Route path="/notice" element={<NoticePage />} />
           <Route path="/faq" element={<FaqPage />} />
+          <Route path="/contact" element={<ContactUsPage />} />
         </Routes>
         <Footer />
       </ThemeProvider>

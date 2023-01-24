@@ -8,6 +8,7 @@ const useStyles = makeStyles({
   title: {
     fontSize: "70px",
     paddingBottom: "50px",
+    letterSpacing: "6px",
   },
   content: {
     lineHeight: "40px",
