@@ -6,6 +6,7 @@ import { SecondContent } from "../components/home/SecondContent";
 import { ThirdContent } from "../components/home/ThirdContent";
 import { FourthContent } from "../components/home/FourthContent";
 import { LastContent } from "../components/home/LastContent";
+import { FifthContent } from "../components/home/FifthContent";
 
 export const HomePage = () => {
   return (
@@ -34,6 +35,11 @@ export const HomePage = () => {
             <div className="section">
               <MainContainer>
                 <FourthContent />
+              </MainContainer>
+            </div>
+            <div className="section">
+              <MainContainer>
+                <FifthContent />
               </MainContainer>
             </div>
             <div className="section">

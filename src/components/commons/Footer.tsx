@@ -1,7 +1,8 @@
 import { makeStyles } from "@mui/styles";
-import Apple from "../../assets/Apple.svg";
-import PlayStore from "../../assets/PlayStore.svg";
 import Insta from "../../assets/Insta.svg";
+import PlayStore from "../../assets/PlayStore.svg";
+import Apple from "../../assets/Apple.svg";
+import { FooterBtn } from "./FooterBtn";
 
 const useStyles = makeStyles({
   root: {
@@ -36,9 +37,9 @@ export const Footer = () => {
     <div className={classes.root}>
       <div className={classes.inner}>
         <div className={classes.btns}>
-          <img src={Apple} />
-          <img src={PlayStore} />
-          <img src={Insta} />
+          <FooterBtn img={Apple} path={"/"} />
+          <FooterBtn img={PlayStore} path={"/"} />
+          <FooterBtn img={Insta} path={"/"} />
         </div>
         <div className={classes.copyright}>{"© 2023 Youdongsan"}</div>
       </div>
