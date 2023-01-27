@@ -7,6 +7,7 @@ import { ThirdContent } from "../components/home/ThirdContent";
 import { FourthContent } from "../components/home/FourthContent";
 import { LastContent } from "../components/home/LastContent";
 import { FifthContent } from "../components/home/FifthContent";
+import { SeniorContent } from "../components/home/SeniorContent";
 
 export const HomePage = () => {
   return (
@@ -14,12 +15,16 @@ export const HomePage = () => {
       //fullpage options
       licenseKey={"YOUR_KEY_HERE"}
       scrollingSpeed={300} /* Options here */
+      anchors={["", "2", "3", "4", "5", "6", "7", "8"]}
       render={({ state, fullpageApi }) => {
+        const handleToReserve = () => {
+          fullpageApi.moveTo("7", 0);
+        };
         return (
           <ReactFullpage.Wrapper>
             <div className="section">
               <MainContainer>
-                <FirstContent />
+                <FirstContent handleToReserve={handleToReserve} />
               </MainContainer>
             </div>
             <div className="section">
@@ -30,6 +35,11 @@ export const HomePage = () => {
             <div className="section">
               <MainContainer>
                 <ThirdContent />
+              </MainContainer>
+            </div>
+            <div className="section">
+              <MainContainer>
+                <SeniorContent />
               </MainContainer>
             </div>
             <div className="section">
@@ -49,7 +59,7 @@ export const HomePage = () => {
             </div>
             <div className="section">
               <MainContainer>
-                <p>Section 1 (welcome to fullpage.js)</p>
+                <p>Section 1 (welcome to fullpage.js)</p>;
                 <button onClick={() => fullpageApi.moveTo("first", 0)}>
                   Click me to move down
                 </button>

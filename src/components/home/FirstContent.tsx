@@ -1,6 +1,10 @@
 import { Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import AppImg1 from "../../assets/AppImg1.png";
+import AppImg2 from "../../assets/AppImg2.png";
+import { AppImgConatiner } from "./AppImgConatiner";
+import { IntroduceText } from "./IntroduceText";
+import { ReserveBtn } from "./ReserveBtn";
 
 const useStyles = makeStyles({
   root: {
@@ -9,17 +13,24 @@ const useStyles = makeStyles({
     justifyContent: "center",
     alignItems: "end",
   },
-  img: {
-    width: "70%",
-    height: "90%",
+  text: {
+    height: "100%",
+    paddingTop: "300px",
   },
 });
 
-export const FirstContent = () => {
+interface IFirstContentProps {
+  handleToReserve: () => void;
+}
+export const FirstContent = ({ handleToReserve }: IFirstContentProps) => {
   const classes = useStyles();
   return (
-    <Grid item xs={12} className={classes.root}>
-      <img className={classes.img} src={AppImg1} alt={"appImg"} />
+    <Grid className={classes.root} item container xs={12}>
+      <Grid className={classes.text} item xs={7}>
+        <IntroduceText />
+        <ReserveBtn handleToReserve={handleToReserve} />
+      </Grid>
+      <AppImgConatiner leftImg={AppImg1} rightImg={AppImg2} />
     </Grid>
   );
 };

@@ -13,7 +13,7 @@ export const theme = createMuiTheme({
           fontStyle: "normal",
         },
         body: {
-          backgroundColor: "#333333",
+          backgroundColor: "#282828",
           color: "white",
           fontFamily: "Chosunilbo_myungjo",
         },
