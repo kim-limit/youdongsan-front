@@ -8,6 +8,7 @@ import { FourthContent } from "../components/home/FourthContent";
 import { LastContent } from "../components/home/LastContent";
 import { FifthContent } from "../components/home/FifthContent";
 import { SeniorContent } from "../components/home/SeniorContent";
+import { ReserveContent } from "../components/home/ReserveContent";
 
 export const HomePage = () => {
   return (
@@ -53,9 +54,9 @@ export const HomePage = () => {
               </MainContainer>
             </div>
             <div className="section">
-              <BackgroundContainer isImg={false}>
-                <LastContent />
-              </BackgroundContainer>
+              <MainContainer>
+                <ReserveContent />
+              </MainContainer>
             </div>
             <div className="section">
               <MainContainer>
