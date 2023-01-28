@@ -20,7 +20,7 @@ const useStyles = makeStyles({
     justifyContent: "space-around",
   },
 });
-export const FifthContent = () => {
+export const Section8 = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>

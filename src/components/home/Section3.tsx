@@ -18,7 +18,7 @@ const useStyles = makeStyles({
     color: "#4CBCCC",
   },
 });
-export const SeniorContent = () => {
+export const Section3 = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>

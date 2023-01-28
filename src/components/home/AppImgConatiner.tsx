@@ -3,8 +3,6 @@ import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles({
   root: {
-    display: "flex",
-    justifyContent: "center",
     alignItems: "center",
     height: "100%",
   },
@@ -25,7 +23,7 @@ export const AppImgConatiner = ({
 }: IAppImgContainerProps) => {
   const classes = useStyles();
   return (
-    <Grid className={classes.root} item container xs={5} spacing={3}>
+    <Grid className={classes.root} item container sm={5} xs={12} spacing={3}>
       <Grid item xs={6}>
         <img className={classes.img} src={leftImg} />
       </Grid>

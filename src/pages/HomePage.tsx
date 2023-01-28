@@ -1,61 +1,81 @@
 import ReactFullpage from "@fullpage/react-fullpage";
 import { MainContainer } from "../components/commons/MainContainer";
-import { FirstContent } from "../components/home/FirstContent";
+import { Section1 } from "../components/home/Section1";
+import { Section8 } from "../components/home/Section8";
+import { Section12 } from "../components/home/Section12";
+import { Section2 } from "../components/home/Section2";
+import { Section3 } from "../components/home/Section3";
+import { Section4 } from "../components/home/Section4";
+import { Section5 } from "../components/home/Section5";
 import { BackgroundContainer } from "../components/home/BackgroundContainer";
-import { SecondContent } from "../components/home/SecondContent";
-import { ThirdContent } from "../components/home/ThirdContent";
-import { FourthContent } from "../components/home/FourthContent";
-import { LastContent } from "../components/home/LastContent";
-import { FifthContent } from "../components/home/FifthContent";
-import { SeniorContent } from "../components/home/SeniorContent";
-import { ReserveContent } from "../components/home/ReserveContent";
+import { Section6 } from "../components/home/Section6";
+import { Section7 } from "../components/home/Section7";
 
 export const HomePage = () => {
   return (
     <ReactFullpage
       //fullpage options
       licenseKey={"YOUR_KEY_HERE"}
-      scrollingSpeed={300} /* Options here */
-      anchors={["", "2", "3", "4", "5", "6", "7", "8"]}
+      scrollingSpeed={700} /* Options here */
+      anchors={["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"]}
       render={({ state, fullpageApi }) => {
         const handleToReserve = () => {
-          fullpageApi.moveTo("7", 0);
+          fullpageApi.moveTo("12", 0);
         };
         return (
           <ReactFullpage.Wrapper>
             <div className="section">
               <MainContainer>
-                <FirstContent handleToReserve={handleToReserve} />
+                <Section1 handleToReserve={handleToReserve} />
               </MainContainer>
             </div>
             <div className="section">
-              <BackgroundContainer isImg={true}>
-                <SecondContent />
+              <MainContainer>
+                <Section2 />
+              </MainContainer>
+            </div>
+            <div className="section">
+              <MainContainer>
+                <Section3 />
+              </MainContainer>
+            </div>
+            <div className="section">
+              <MainContainer>
+                <Section4 />
+              </MainContainer>
+            </div>
+            <div className="section">
+              <MainContainer>
+                <Section5 />
+              </MainContainer>
+            </div>
+            <div className="section">
+              <BackgroundContainer isLeft={true}>
+                <Section6 />
+              </BackgroundContainer>
+            </div>
+            <div className="section">
+              <BackgroundContainer isLeft={false}>
+                <Section7 />
               </BackgroundContainer>
             </div>
             <div className="section">
               <MainContainer>
-                <ThirdContent />
+                <Section8 />
               </MainContainer>
             </div>
             <div className="section">
-              <MainContainer>
-                <SeniorContent />
-              </MainContainer>
+              <MainContainer></MainContainer>
+            </div>
+            <div className="section">
+              <MainContainer></MainContainer>
+            </div>
+            <div className="section">
+              <MainContainer></MainContainer>
             </div>
             <div className="section">
               <MainContainer>
-                <FourthContent />
-              </MainContainer>
-            </div>
-            <div className="section">
-              <MainContainer>
-                <FifthContent />
-              </MainContainer>
-            </div>
-            <div className="section">
-              <MainContainer>
-                <ReserveContent />
+                <Section12 />
               </MainContainer>
             </div>
             <div className="section">

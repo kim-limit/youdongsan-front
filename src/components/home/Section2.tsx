@@ -16,7 +16,7 @@ const useStyles = makeStyles({
   },
 });
 
-export const ThirdContent = () => {
+export const Section2 = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>

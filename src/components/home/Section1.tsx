@@ -8,27 +8,31 @@ import { ReserveBtn } from "./ReserveBtn";
 
 const useStyles = makeStyles({
   root: {
-    height: "100%",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "end",
+    // height: "100%",
   },
   text: {
+    // height: "100%",
+  },
+  inner: {
     height: "100%",
-    paddingTop: "300px",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
   },
 });
 
 interface IFirstContentProps {
   handleToReserve: () => void;
 }
-export const FirstContent = ({ handleToReserve }: IFirstContentProps) => {
+export const Section1 = ({ handleToReserve }: IFirstContentProps) => {
   const classes = useStyles();
   return (
-    <Grid className={classes.root} item container xs={12}>
-      <Grid className={classes.text} item xs={7}>
-        <IntroduceText />
-        <ReserveBtn handleToReserve={handleToReserve} />
+    <Grid className={classes.root} item container>
+      <Grid className={classes.text} item sm={7} xs={12}>
+        <div className={classes.inner}>
+          <IntroduceText />
+          <ReserveBtn handleToReserve={handleToReserve} />
+        </div>
       </Grid>
       <AppImgConatiner leftImg={AppImg1} rightImg={AppImg2} />
     </Grid>

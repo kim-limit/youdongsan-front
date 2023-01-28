@@ -10,7 +10,7 @@ const useStyles = makeStyles({
   },
 });
 
-export const SecondContent = () => {
+export const MockContent = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>

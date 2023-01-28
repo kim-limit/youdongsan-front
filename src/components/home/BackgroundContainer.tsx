@@ -1,41 +1,44 @@
 import { Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import React from "react";
-import Background from "../../assets/Background.png";
+import LeftLoad from "../../assets/LeftLoad.png";
+import RightLoad from "../../assets/RightLoad.png";
 
 const useStyles = makeStyles({
   root: {
     height: "100vh",
-    width: "100vw",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-  },
-  img: {
-    backgroundImage: `url(${Background})`,
+    maxWidth: "1440px",
+    maxHeight: "950px",
+    margin: "0 auto",
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
   },
-  color: {
-    backgroundColor: "#4CBCCC",
+  left: {
+    backgroundImage: `url(${LeftLoad})`,
+  },
+  right: {
+    backgroundImage: `url(${RightLoad})`,
   },
 });
 
 interface IBackgroundContainerProps {
   children?: React.ReactNode;
-  isImg: boolean;
+  isLeft: boolean;
 }
 
 export const BackgroundContainer = ({
   children,
-  isImg,
+  isLeft,
 }: IBackgroundContainerProps) => {
   const classes = useStyles();
   return (
     <Grid
       container
-      className={`${classes.root} ${isImg ? classes.img : classes.color}`}
+      className={`${classes.root} ${isLeft ? classes.left : classes.right}`}
     >
       {children}
     </Grid>
