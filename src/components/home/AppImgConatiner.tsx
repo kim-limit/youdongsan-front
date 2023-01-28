@@ -1,5 +1,6 @@
 import { Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
+import { animated, useSpring } from "@react-spring/web";
 
 const useStyles = makeStyles({
   root: {
@@ -22,13 +23,37 @@ export const AppImgConatiner = ({
   rightImg,
 }: IAppImgContainerProps) => {
   const classes = useStyles();
+
+  const left = useSpring({
+    from: { x: 100 },
+    to: { x: 0 },
+    config: {
+      tension: 100,
+    },
+  });
+  const right = useSpring({
+    from: { x: -100 },
+    to: { x: 0 },
+    config: {
+      tension: 100,
+    },
+  });
+
   return (
     <Grid className={classes.root} item container sm={5} xs={12} spacing={3}>
       <Grid item xs={6}>
-        <img className={classes.img} src={leftImg} />
+        <animated.img
+          style={{ ...left }}
+          className={classes.img}
+          src={leftImg}
+        />
       </Grid>
       <Grid item xs={6}>
-        <img className={classes.img} src={rightImg} />
+        <animated.img
+          style={{ ...right }}
+          className={classes.img}
+          src={rightImg}
+        />
       </Grid>
     </Grid>
   );

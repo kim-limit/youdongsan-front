@@ -1,6 +1,4 @@
-import { Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import { ReserveBtn } from "./ReserveBtn";
 
 const useStyles = makeStyles({
   root: {
