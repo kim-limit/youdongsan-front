@@ -1,9 +1,10 @@
 import axios from "axios";
-import { INoticeProps } from "../interface/notice";
+import {INotice} from "../interface/notice";
+import {IResponseProps} from "./request";
 
 export const getNotices = () => {
-  const url = `/notice`;
-  return axios.get<INoticeProps[]>(url).then((res) => {
-    return res.data;
-  });
+    const url = `/notice`;
+    return axios.get<IResponseProps<INotice[]>>(url).then((res) => {
+        return res.data;
+    });
 };
