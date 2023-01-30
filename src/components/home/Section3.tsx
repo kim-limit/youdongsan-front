@@ -8,14 +8,18 @@ const useStyles = makeStyles({
   },
   content: {
     fontSize: "32px",
-    backgroundColor: "#3F3D3D",
+    backgroundColor: "rgba(78, 197, 214, 0.75)",
     boxShadow: "inset 0 4px 4px 0 rgba(0, 0, 0, 0.37)",
-    padding: "80px 33px 80px 32px",
+    padding: "80px 63px 80px 63px",
+    letterSpacing: "-0.64px",
     marginTop: "28px",
-    lineHeight: "1.47",
+    lineHeight: "1.5",
+    color: "#282828",
+    textAlign: "center",
   },
   hightlight: {
-    color: "#4CBCCC",
+    color: "#fff",
+    textDecoration: "underLine",
   },
 });
 export const Section3 = () => {

@@ -1,6 +1,7 @@
+import { keyframes } from "@emotion/react";
 import { Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import { animated, useSpring } from "@react-spring/web";
+import { Reveal } from "react-awesome-reveal";
 
 const useStyles = makeStyles({
   root: {
@@ -13,6 +14,30 @@ const useStyles = makeStyles({
   },
 });
 
+const customAnimationLeft = keyframes`
+  from {
+    opacity: 0;
+    transform: translate3d(200px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+`;
+
+const customAnimationRight = keyframes`
+  from {
+    opacity: 0;
+    transform: translate3d(-200px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+`;
+
 interface IAppImgContainerProps {
   leftImg: string;
   rightImg: string;
@@ -24,36 +49,17 @@ export const AppImgConatiner = ({
 }: IAppImgContainerProps) => {
   const classes = useStyles();
 
-  const left = useSpring({
-    from: { x: 100 },
-    to: { x: 0 },
-    config: {
-      tension: 100,
-    },
-  });
-  const right = useSpring({
-    from: { x: -100 },
-    to: { x: 0 },
-    config: {
-      tension: 100,
-    },
-  });
-
   return (
     <Grid className={classes.root} item container sm={5} xs={12} spacing={3}>
       <Grid item xs={6}>
-        <animated.img
-          style={{ ...left }}
-          className={classes.img}
-          src={leftImg}
-        />
+        <Reveal keyframes={customAnimationLeft} duration={1500}>
+          <img className={classes.img} src={leftImg} />
+        </Reveal>
       </Grid>
       <Grid item xs={6}>
-        <animated.img
-          style={{ ...right }}
-          className={classes.img}
-          src={rightImg}
-        />
+        <Reveal keyframes={customAnimationRight} duration={1500}>
+          <img className={classes.img} src={rightImg} />
+        </Reveal>
       </Grid>
     </Grid>
   );
