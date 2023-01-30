@@ -41,7 +41,7 @@ export const IntroduceText = () => {
       <Reveal keyframes={customAnimation} duration={1200}>
         <div className={classes.title}>
           {"은행에 "} <span className={classes.highlight}>{"돈"}</span>
-          {" 맡기지 마세요"}
+          {" 맡기지 마세요!"}
         </div>
         <div className={classes.title}>
           {"은행과 "}
