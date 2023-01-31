@@ -8,10 +8,10 @@ import { ReserveBtn } from "./ReserveBtn";
 
 const useStyles = makeStyles({
   root: {
-    // height: "100%",
+    height: "100%",
   },
   text: {
-    // height: "100%",
+    height: "100%",
   },
   inner: {
     height: "100%",
@@ -34,7 +34,9 @@ export const Section1 = ({ handleToReserve }: IFirstContentProps) => {
           <ReserveBtn handleToReserve={handleToReserve} />
         </div>
       </Grid>
-      <AppImgConatiner leftImg={AppImg1} rightImg={AppImg2} />
+      <Grid item sm={5} xs={12}>
+        <AppImgConatiner leftImg={AppImg1} rightImg={AppImg2} />
+      </Grid>
     </Grid>
   );
 };

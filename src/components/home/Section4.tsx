@@ -1,8 +1,13 @@
 import { Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
+import Money from "../../assets/Money.png";
 
 const useStyles = makeStyles({
-  root: {},
+  root: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
   title: {
     fontSize: "48px",
   },
@@ -15,13 +20,16 @@ const useStyles = makeStyles({
   },
   img: {
     height: "100%",
+    width: "100%",
   },
 });
 export const Section4 = () => {
   const classes = useStyles();
   return (
-    <Grid container>
-      <Grid className={classes.img} item sm={7}></Grid>
+    <Grid className={classes.root} container>
+      <Grid className={classes.img} item sm={7}>
+        <img className={classes.img} src={Money} />
+      </Grid>
       <Grid item sm={5}>
         <div className={classes.grey}>
           <div className={classes.title}>{"새로운"}</div>

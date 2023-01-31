@@ -2,8 +2,8 @@ import { makeStyles } from "@mui/styles";
 import Graph from "../../assets/Graph.png";
 const useStyles = makeStyles({
   root: {
-    height: "100vh",
-    width: "100vw",
+    height: "100%",
+    width: "100%",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
@@ -21,7 +21,6 @@ const useStyles = makeStyles({
     backgroundImage: `url(${Graph})`,
     backgroundPosition: "center",
     backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
   },
 });
 export const Section5 = () => {

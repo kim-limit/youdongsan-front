@@ -1,16 +1,20 @@
 import { keyframes } from "@emotion/react";
-import { Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { Reveal } from "react-awesome-reveal";
 
 const useStyles = makeStyles({
   root: {
+    display: "flex",
+    justifyContent: "center",
     alignItems: "center",
     height: "100%",
   },
+  inner: {
+    marginRight: "40px",
+  },
   img: {
-    width: "100%",
-    height: "100%",
+    width: "250px",
+    height: "550px",
   },
 });
 
@@ -50,17 +54,17 @@ export const AppImgConatiner = ({
   const classes = useStyles();
 
   return (
-    <Grid className={classes.root} item container sm={5} xs={12} spacing={3}>
-      <Grid item xs={6}>
+    <div className={classes.root}>
+      <div className={classes.inner}>
         <Reveal keyframes={customAnimationLeft} duration={1500}>
           <img className={classes.img} src={leftImg} />
         </Reveal>
-      </Grid>
-      <Grid item xs={6}>
+      </div>
+      <div>
         <Reveal keyframes={customAnimationRight} duration={1500}>
           <img className={classes.img} src={rightImg} />
         </Reveal>
-      </Grid>
-    </Grid>
+      </div>
+    </div>
   );
 };

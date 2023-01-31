@@ -10,7 +10,7 @@ const useStyles = makeStyles({
     alignItems: "center",
     maxWidth: "1440px",
     margin: "0 auto",
-    padding: "0 40px",
+    padding: "100px 0",
   },
 });
 

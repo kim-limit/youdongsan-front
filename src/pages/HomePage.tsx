@@ -10,6 +10,9 @@ import { Section5 } from "../components/home/Section5";
 import { BackgroundContainer } from "../components/home/BackgroundContainer";
 import { Section6 } from "../components/home/Section6";
 import { Section7 } from "../components/home/Section7";
+import { Section9 } from "../components/home/Section9";
+import { Section10 } from "../components/home/Section10";
+import { Section11 } from "../components/home/Section11";
 
 export const HomePage = () => {
   return (
@@ -65,13 +68,19 @@ export const HomePage = () => {
               </MainContainer>
             </div>
             <div className="section">
-              <MainContainer></MainContainer>
+              <MainContainer>
+                <Section9 />
+              </MainContainer>
             </div>
             <div className="section">
-              <MainContainer></MainContainer>
+              <MainContainer>
+                <Section10 />
+              </MainContainer>
             </div>
             <div className="section">
-              <MainContainer></MainContainer>
+              <MainContainer>
+                <Section11 />
+              </MainContainer>
             </div>
             <div className="section">
               <MainContainer>
