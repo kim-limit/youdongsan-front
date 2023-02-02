@@ -87,7 +87,7 @@ export const HomePage = () => {
                 <Section12 />
               </MainContainer>
             </div>
-            <div className="section">
+            {/* <div className="section">
               <MainContainer>
                 <p>Section 1 (welcome to fullpage.js)</p>;
                 <button onClick={() => fullpageApi.moveTo("first", 0)}>
@@ -103,7 +103,7 @@ export const HomePage = () => {
                   }}
                 ></p>
               </MainContainer>
-            </div>
+            </div> */}
           </ReactFullpage.Wrapper>
         );
       }}

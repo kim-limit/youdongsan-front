@@ -32,8 +32,9 @@ export const Section7 = () => {
         </div>
         <StepText
           step={2}
-          firstLine={"대출자는 건물의 임대료 및 기타 수익으로"}
-          secondLine={"투자자들에게 원금 및 이자 상환"}
+          firstLine={"대출자는 건물의 임대료 및"}
+          secondLine={"기타 수익으로"}
+          thirdLine={"투자자들에게 원금 및 이자 상환"}
         />
       </div>
       <div className={classes.step1}>
