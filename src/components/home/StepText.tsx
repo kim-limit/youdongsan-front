@@ -4,6 +4,9 @@ const useStyles = makeStyles({
   root: {
     fontSize: "20px",
     textAlign: "center",
+    "@media (max-width: 600px)": {
+      fontSize: "10px",
+    },
   },
 });
 

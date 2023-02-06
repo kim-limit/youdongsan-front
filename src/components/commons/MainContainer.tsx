@@ -11,6 +11,9 @@ const useStyles = makeStyles({
     maxWidth: "1440px",
     margin: "0 auto",
     padding: "100px 0",
+    "@media (max-width: 600px)": {
+      padding: "100px 30px 0 30px",
+    },
   },
 });
 

@@ -15,14 +15,14 @@ export const Section10 = () => {
 
   return (
     <Grid className={classes.root} item container>
-      <Grid item sm={4}>
+      <Grid item sm={6} xs={12}>
         <SolutionBox
           head={"[소액투자]"}
           firstLine={"10,000원 으로도 가능한"}
           secondLine={"부동산 투자"}
         />
       </Grid>
-      <Grid item sm={8}>
+      <Grid item sm={6} xs={12}>
         <AppImgConatiner leftImg={AppImg1} rightImg={AppImg2} />
       </Grid>
     </Grid>

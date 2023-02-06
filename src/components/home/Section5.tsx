@@ -10,9 +10,17 @@ const useStyles = makeStyles({
   },
   head: {
     fontSize: "48px",
+    paddingBottom: "100px",
+    "@media (max-width: 600px)": {
+      fontSize: "18px",
+    },
   },
   content: {
     fontSize: "36px",
+    paddingTop: "200px",
+    "@media (max-width: 600px)": {
+      fontSize: "18px",
+    },
   },
   grey: {
     color: "rgba(255, 255, 255, 0.45)",
@@ -20,7 +28,8 @@ const useStyles = makeStyles({
   img: {
     backgroundImage: `url(${Graph})`,
     backgroundPosition: "center",
-    backgroundSize: "cover",
+    backgroundSize: "contain",
+    backgroundRepeat: "no-repeat",
   },
 });
 export const Section5 = () => {

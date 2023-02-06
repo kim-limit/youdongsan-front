@@ -3,20 +3,22 @@ import { makeStyles } from "@mui/styles";
 import { ReserveInputGroup } from "./ReserveInputGroup";
 
 const useStyles = makeStyles({
-  root: {
-    display: "flex",
-    justifyContent: "center",
-    flexDirection: "column",
-  },
   title: {
-    fontSize: "48px",
+    fontSize: "30px",
     letterSpacing: "4.8px",
+    "@media (max-width: 600px)": {
+      fontSize: "20px",
+    },
   },
   content: {
     paddingTop: "100px",
     fontSize: "20px",
     lineHeight: "1.75",
     letterSpacing: "2px",
+    "@media (max-width: 600px)": {
+      fontSize: "15px",
+      paddingTop: "10px",
+    },
   },
   highlight: {
     color: "#54EAFF",
@@ -30,6 +32,10 @@ const useStyles = makeStyles({
     justifyContent: "center",
     alignItems: "center",
     marginTop: "30px",
+    "@media (max-width: 600px)": {
+      width: "200px",
+      height: "40px",
+    },
   },
 });
 
@@ -37,13 +43,16 @@ export const Section12 = () => {
   const classes = useStyles();
   return (
     <Grid container>
-      <Grid item sm={8}>
+      <Grid item sm={8} xs={12}>
         <div className={classes.title}>
-          {"투자 시 사용가능한 "}
+          {"지금 신청하시는 분들꼐"}
           <div>
-            <span className={classes.highlight}>{"투자 포인트 10,000원"}</span>
+            <span className={classes.highlight}>
+              {"1년간 거래수수료 50% 할인 혜택"}
+            </span>
             {"을 드립니다!"}
           </div>
+          {"6000 명 선착순"}
         </div>
         <div className={classes.content}>
           <div>
@@ -65,7 +74,7 @@ export const Section12 = () => {
           <div className={classes.btn}>{"오픈카톡방 바로가기"}</div>
         </div>
       </Grid>
-      <Grid item sm={4}>
+      <Grid item sm={4} xs={12}>
         <ReserveInputGroup />
       </Grid>
     </Grid>

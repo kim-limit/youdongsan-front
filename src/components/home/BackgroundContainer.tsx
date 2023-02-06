@@ -14,7 +14,7 @@ const useStyles = makeStyles({
     maxHeight: "950px",
     margin: "0 auto",
     backgroundPosition: "center",
-    backgroundSize: "cover",
+    backgroundSize: "contain",
     backgroundRepeat: "no-repeat",
   },
   left: {

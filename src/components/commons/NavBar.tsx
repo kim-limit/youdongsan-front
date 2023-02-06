@@ -10,6 +10,9 @@ const useStyles = makeStyles({
     height: "177px",
     width: "100vw",
     padding: "0 40px",
+    "@media (max-width: 600px)": {
+      height: "100px",
+    },
   },
   inner: {
     display: "flex",

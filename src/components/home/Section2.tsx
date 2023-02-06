@@ -6,10 +6,16 @@ const useStyles = makeStyles({
   },
   text: {
     fontSize: "40px",
+    "@media (max-width: 600px)": {
+      fontSize: "18px",
+    },
   },
   head: {
     paddingTop: "62px",
     fontSize: "60px",
+    "@media (max-width: 600px)": {
+      fontSize: "30px",
+    },
   },
   highlight: {
     color: "#4CBCCC",

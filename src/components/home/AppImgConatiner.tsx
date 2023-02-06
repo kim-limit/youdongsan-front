@@ -8,13 +8,14 @@ const useStyles = makeStyles({
     justifyContent: "center",
     alignItems: "center",
     height: "100%",
+    width: "100%",
   },
   inner: {
     marginRight: "40px",
   },
   img: {
-    width: "250px",
-    height: "550px",
+    width: "80%",
+    height: "80%",
   },
 });
 

@@ -1,5 +1,4 @@
 import { makeStyles } from "@mui/styles";
-import { CircleContainer } from "./CircleContainer";
 import { SolutionItem } from "./SolutionItem";
 
 const useStyles = makeStyles({

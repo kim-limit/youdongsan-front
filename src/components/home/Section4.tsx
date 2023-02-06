@@ -10,9 +10,15 @@ const useStyles = makeStyles({
   },
   title: {
     fontSize: "48px",
+    "@media (max-width: 600px)": {
+      fontSize: "28px",
+    },
   },
   content: {
     fontSize: "24px",
+    "@media (max-width: 600px)": {
+      fontSize: "20px",
+    },
   },
   grey: {
     color: "rgba(255, 255, 255, 0.45)",

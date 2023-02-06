@@ -12,12 +12,15 @@ const useStyles = makeStyles({
   },
   text: {
     height: "100%",
+    display: "flex",
+    justifyContent: "center",
   },
   inner: {
     height: "100%",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
+    // alignItems: "center",
   },
 });
 
@@ -27,14 +30,19 @@ interface IFirstContentProps {
 export const Section1 = ({ handleToReserve }: IFirstContentProps) => {
   const classes = useStyles();
   return (
-    <Grid className={classes.root} item container>
-      <Grid className={classes.text} item sm={7} xs={12}>
+    <Grid
+      className={classes.root}
+      item
+      container
+      direction={{ xs: "column", sm: "row" }}
+    >
+      <Grid className={classes.text} item sm={6} xs={4}>
         <div className={classes.inner}>
           <IntroduceText />
           <ReserveBtn handleToReserve={handleToReserve} />
         </div>
       </Grid>
-      <Grid item sm={5} xs={12}>
+      <Grid item sm={6} xs={8}>
         <AppImgConatiner leftImg={AppImg1} rightImg={AppImg2} />
       </Grid>
     </Grid>

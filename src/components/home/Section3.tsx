@@ -5,6 +5,9 @@ const useStyles = makeStyles({
   title: {
     fontSize: "48px",
     textAlign: "center",
+    "@media (max-width: 600px)": {
+      fontSize: "20px",
+    },
   },
   content: {
     fontSize: "32px",
@@ -16,6 +19,9 @@ const useStyles = makeStyles({
     lineHeight: "1.5",
     color: "#282828",
     textAlign: "center",
+    "@media (max-width: 600px)": {
+      fontSize: "10px",
+    },
   },
   hightlight: {
     color: "#fff",
@@ -26,7 +32,7 @@ export const Section3 = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <div className={classes.title}>{"[선순위 투자]"}</div>
+      <div className={classes.title}>{"[선순위 투자란?]"}</div>
       <div className={classes.content}>
         <div>
           {"선순위 투자는 투자 시 원금과 이자를 "}{" "}

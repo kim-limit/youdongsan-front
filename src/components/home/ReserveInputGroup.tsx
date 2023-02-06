@@ -17,6 +17,10 @@ const useStyles = makeStyles({
     fontSize: "20px",
     color: "white",
     marginTop: "5px",
+    "@media (max-width: 600px)": {
+      width: "360px",
+      height: "40px",
+    },
   },
   btn: {
     width: "400px",
@@ -27,6 +31,10 @@ const useStyles = makeStyles({
     alignItems: "center",
     justifyContent: "center",
     marginTop: "20px",
+    "@media (max-width: 600px)": {
+      width: "360px",
+      height: "40px",
+    },
   },
 });
 export const ReserveInputGroup = () => {

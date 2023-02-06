@@ -14,16 +14,21 @@ export const Section11 = () => {
   const classes = useStyles();
 
   return (
-    <Grid className={classes.root} item container>
-      <Grid item sm={8}>
-        <AppImgConatiner leftImg={AppImg1} rightImg={AppImg2} />
-      </Grid>
-      <Grid item sm={4}>
+    <Grid
+      className={classes.root}
+      item
+      container
+      direction={{ xs: "row", sm: "row-reverse" }}
+    >
+      <Grid item sm={6} xs={12}>
         <SolutionBox
           head={"[일할정산]"}
           firstLine={"투자한 금액의"}
           secondLine={"이자를 일할 정산"}
         />
+      </Grid>
+      <Grid item sm={6} xs={12}>
+        <AppImgConatiner leftImg={AppImg1} rightImg={AppImg2} />
       </Grid>
     </Grid>
   );

@@ -8,13 +8,22 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-around",
+    "@media (max-width: 600px)": {
+      justifyContent: "normal",
+    },
   },
   head: {
     fontSize: "48px",
     marginLeft: "40px",
+    "@media (max-width: 600px)": {
+      fontSize: "15px",
+    },
   },
   step1: {
     marginRight: "400px",
+    "@media (max-width: 600px)": {
+      marginRight: "100px",
+    },
   },
   step: {
     display: "flex",

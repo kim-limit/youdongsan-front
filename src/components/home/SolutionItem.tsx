@@ -13,6 +13,11 @@ const useStyles = makeStyles({
   circle: {
     width: "228px",
     height: "228px",
+    "@media (max-width: 600px)": {
+      width: "120px",
+      height: "120px",
+      fontSize: "20px",
+    },
     borderRadius: "50%",
     backgroundColor: "#6fc4d0",
     display: "flex",
