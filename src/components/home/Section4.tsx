@@ -10,23 +10,35 @@ const useStyles = makeStyles({
   },
   title: {
     fontSize: "48px",
+    paddingTop: "43px",
     "@media (max-width: 600px)": {
-      fontSize: "28px",
+      fontSize: "16px",
+      paddingTop: "20px",
     },
   },
   content: {
     fontSize: "24px",
     "@media (max-width: 600px)": {
-      fontSize: "20px",
+      fontSize: "10px",
     },
   },
   grey: {
     color: "rgba(255, 255, 255, 0.45)",
-    paddingBottom: "43px",
   },
   img: {
     height: "100%",
     width: "100%",
+  },
+  head: {
+    fontSize: "48px",
+    display: "flex",
+    justifyContent: "center",
+  },
+  text: {
+    paddingBottom: "130px",
+    "@media (max-width: 600px)": {
+      paddingBottom: "0px",
+    },
   },
 });
 export const Section4 = () => {
@@ -36,7 +48,8 @@ export const Section4 = () => {
       <Grid className={classes.img} item sm={7}>
         <img className={classes.img} src={Money} />
       </Grid>
-      <Grid item sm={5}>
+      <Grid className={classes.text} item sm={5}>
+        <div className={classes.title}>{"[안정성]"}</div>
         <div className={classes.grey}>
           <div className={classes.title}>{"새로운"}</div>
           <div className={classes.content}>

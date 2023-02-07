@@ -2,8 +2,8 @@ import { Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { SolutionBox } from "./SolutionBox";
 import { AppImgConatiner } from "./AppImgConatiner";
-import AppImg1 from "../../assets/AppImg1.png";
-import AppImg2 from "../../assets/AppImg2.png";
+import AppImg5 from "../../assets/AppImg5.png";
+import AppImg6 from "../../assets/AppImg6.png";
 
 const useStyles = makeStyles({
   root: {
@@ -22,8 +22,8 @@ export const Section10 = () => {
           secondLine={"부동산 투자"}
         />
       </Grid>
-      <Grid item sm={6} xs={12}>
-        <AppImgConatiner leftImg={AppImg1} rightImg={AppImg2} />
+      <Grid item sm={6} xs={12} textAlign={"center"}>
+        <AppImgConatiner leftImg={AppImg5} rightImg={AppImg6} />
       </Grid>
     </Grid>
   );

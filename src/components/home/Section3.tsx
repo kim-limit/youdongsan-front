@@ -21,6 +21,7 @@ const useStyles = makeStyles({
     textAlign: "center",
     "@media (max-width: 600px)": {
       fontSize: "10px",
+      padding: "30px 20px",
     },
   },
   hightlight: {

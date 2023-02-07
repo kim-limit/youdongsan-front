@@ -15,13 +15,22 @@ const useStyles = makeStyles({
     alignItems: "center",
     flexDirection: "column",
     height: "200px",
+    "@media (max-width: 600px)": {
+      height: "100px",
+    },
   },
   title: {
     fontSize: "60px",
     letterSpacing: "6px",
+    "@media (max-width: 600px)": {
+      fontSize: "30px",
+    },
   },
   content: {
     fontSize: "16px",
+    "@media (max-width: 600px)": {
+      fontSize: "10px",
+    },
   },
   InfoBox: {
     height: "250px",

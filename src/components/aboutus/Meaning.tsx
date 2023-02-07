@@ -5,6 +5,9 @@ const useStyles = makeStyles({
     fontSize: "32px",
     width: "150px",
     textAlign: "center",
+    "@media (max-width: 600px)": {
+      fontSize: "30px",
+    },
   },
   red: {
     color: "#FF7A7A",

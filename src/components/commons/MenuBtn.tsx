@@ -4,10 +4,14 @@ import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles({
   root: {
-    backgroundColor: "#333333",
+    backgroundColor: "#282828",
     height: "30px",
     width: "40px",
     cursor: "pointer",
+    "@media (max-width: 600px)": {
+      width: "30px",
+      height: "20px",
+    },
   },
   btn: {
     height: "100%",

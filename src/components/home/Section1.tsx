@@ -9,6 +9,11 @@ import { ReserveBtn } from "./ReserveBtn";
 const useStyles = makeStyles({
   root: {
     height: "100%",
+    "@media (max-width: 600px)": {
+      display: "flex",
+      justifyContent: "center",
+      textAlign: "center",
+    },
   },
   text: {
     height: "100%",
@@ -20,7 +25,9 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    // alignItems: "center",
+    "@media (max-width: 600px)": {
+      alignItems: "center",
+    },
   },
 });
 
@@ -42,7 +49,7 @@ export const Section1 = ({ handleToReserve }: IFirstContentProps) => {
           <ReserveBtn handleToReserve={handleToReserve} />
         </div>
       </Grid>
-      <Grid item sm={6} xs={8}>
+      <Grid item sm={6} xs={6}>
         <AppImgConatiner leftImg={AppImg1} rightImg={AppImg2} />
       </Grid>
     </Grid>

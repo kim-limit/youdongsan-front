@@ -2,8 +2,8 @@ import { Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { SolutionBox } from "./SolutionBox";
 import { AppImgConatiner } from "./AppImgConatiner";
-import AppImg1 from "../../assets/AppImg1.png";
-import AppImg2 from "../../assets/AppImg2.png";
+import AppImg7 from "../../assets/AppImg7.png";
+import AppImg8 from "../../assets/AppImg8.png";
 
 const useStyles = makeStyles({
   root: {
@@ -27,8 +27,8 @@ export const Section11 = () => {
           secondLine={"이자를 일할 정산"}
         />
       </Grid>
-      <Grid item sm={6} xs={12}>
-        <AppImgConatiner leftImg={AppImg1} rightImg={AppImg2} />
+      <Grid item sm={6} xs={12} textAlign={"center"}>
+        <AppImgConatiner leftImg={AppImg7} rightImg={AppImg8} />
       </Grid>
     </Grid>
   );

@@ -12,10 +12,17 @@ const useStyles = makeStyles({
   head: {
     textAlign: "center",
     fontSize: "48px",
+    "@media (max-width: 600px)": {
+      fontSize: "20px",
+      paddingTop: "50px",
+    },
   },
   content: {
     fontSize: "30px",
     textAlign: "center",
+    "@media (max-width: 600px)": {
+      fontSize: "10px",
+    },
   },
 });
 

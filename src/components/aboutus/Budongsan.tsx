@@ -1,14 +1,10 @@
+import { Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { Chinese } from "./Chinese";
 import { Meaning } from "./Meaning";
 import { Sound } from "./Sound";
 
 const useStyles = makeStyles({
-  root: {
-    display: "flex",
-    justifyContent: "space-around",
-    width: "100%",
-  },
   wrapper: {
     display: "flex",
     justifyContent: "center",
@@ -18,8 +14,8 @@ const useStyles = makeStyles({
 export const BudongSan = () => {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
-      <div>
+    <Grid container spacing={6}>
+      <Grid item sm={6} xs={12}>
         <div className={classes.wrapper}>
           <Chinese fontColor={"white"} text={"不"} />
           <Meaning fontColor={"red"} text={"아니"} />
@@ -35,8 +31,8 @@ export const BudongSan = () => {
           <Meaning fontColor={"white"} text={"낳을"} />
           <Sound fontColor={"white"} text={"산"} />
         </div>
-      </div>
-      <div>
+      </Grid>
+      <Grid item sm={6} xs={12}>
         <div className={classes.wrapper}>
           <Chinese fontColor={"mint"} text={"流"} />
           <Meaning fontColor={"mint"} text={"흐를"} />
@@ -52,7 +48,7 @@ export const BudongSan = () => {
           <Meaning fontColor={"white"} text={"낳을"} />
           <Sound fontColor={"white"} text={"산"} />
         </div>
-      </div>
-    </div>
+      </Grid>
+    </Grid>
   );
 };

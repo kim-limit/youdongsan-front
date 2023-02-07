@@ -10,9 +10,16 @@ const useStyles = makeStyles({
     fontSize: "60px",
     letterSpacing: "5px",
     paddingBottom: "14px",
+    "@media (max-width: 600px)": {
+      fontSize: "15px",
+    },
   },
   explain: {
     paddingBottom: "50px",
+    "@media (max-width: 600px)": {
+      fontSize: "10px",
+      paddingBottom: "20px",
+    },
   },
   content: {
     display: "flex",

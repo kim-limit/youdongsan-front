@@ -3,12 +3,18 @@ import { makeStyles } from "@mui/styles";
 const useStyles = makeStyles({
   root: {
     fontSize: "20px",
+    "@media (max-width: 600px)": {
+      fontSize: "15px",
+    },
   },
   inner: {
     marginBottom: "20px",
+    "@media (max-width: 600px)": {
+      marginBottom: "10px",
+    },
   },
   input: {
-    width: "400px",
+    width: "85%",
     height: "67px",
     borderRadius: "15px",
     border: "solid 1px #fff",
@@ -17,13 +23,19 @@ const useStyles = makeStyles({
     fontSize: "20px",
     color: "white",
     marginTop: "5px",
+    "@media (max-width: 1100px)": {
+      fontSize: "13px",
+      height: "50px",
+    },
     "@media (max-width: 600px)": {
-      width: "360px",
-      height: "40px",
+      width: "100%",
+      height: "30px",
+      borderRadius: "5px",
+      fontSize: "15px",
     },
   },
   btn: {
-    width: "400px",
+    width: "85%",
     height: "67px",
     borderRadius: "15px",
     backgroundColor: "#4cbccc",
@@ -31,9 +43,13 @@ const useStyles = makeStyles({
     alignItems: "center",
     justifyContent: "center",
     marginTop: "20px",
+    "@media (max-width: 1100px)": {
+      height: "50px",
+    },
     "@media (max-width: 600px)": {
-      width: "360px",
-      height: "40px",
+      width: "100%",
+      height: "30px",
+      borderRadius: "5px",
     },
   },
 });

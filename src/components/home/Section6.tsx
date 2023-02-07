@@ -7,28 +7,51 @@ const useStyles = makeStyles({
     width: "100%",
     display: "flex",
     flexDirection: "column",
-    // justifyContent: "space-around",
+    "@media (max-height: 700px)": {
+      height: "70%",
+    },
   },
   head: {
     fontSize: "48px",
     marginRight: "40px",
+    "@media (max-width: 1200px)": {
+      fontSize: "30px",
+    },
+    "@media (max-width: 900px)": {
+      fontSize: "25px",
+    },
     "@media (max-width: 600px)": {
-      fontSize: "15px",
+      fontSize: "18px",
+      padding: "20px",
     },
   },
   inner: {
     display: "flex",
     justifyContent: "space-between",
+    "@media (max-width: 600px)": {
+      flexDirection: "column-reverse",
+    },
   },
   step1: {
-    paddingTop: "30px",
+    marginTop: "30px",
+    "@media (max-width: 1200px)": {
+      marginTop: "80px",
+    },
+    "@media (max-width: 900px)": {
+      marginTop: "0px",
+      marginLeft: "100px",
+    },
     "@media (max-width: 600px)": {
-      paddingTop: "80px",
+      marginLeft: "0px",
+      marginRight: "200px",
     },
   },
   step2: {
     marginRight: "400px",
     marginTop: "100px",
+    "@media (max-width: 900px)": {
+      marginRight: "0px",
+    },
     "@media (max-width: 600px)": {
       marginRight: "0px",
       marginTop: "80px",
@@ -37,9 +60,12 @@ const useStyles = makeStyles({
   step3: {
     marginLeft: "700px",
     marginTop: "50px",
+    "@media (max-width: 900px)": {
+      marginLeft: "400px",
+    },
     "@media (max-width: 600px)": {
       marginLeft: "250px",
-      paddingBottom: "100px",
+      marginTop: "0px",
     },
   },
 });

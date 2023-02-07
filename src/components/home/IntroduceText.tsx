@@ -11,21 +11,22 @@ const useStyles = makeStyles({
   title: {
     fontSize: "48px",
     letterSpacing: "4.8px",
-    "@media (max-width: 1000px)": {
+    "@media (max-width: 1200px)": {
       fontSize: "28px",
     },
     "@media (max-width: 600px)": {
-      fontSize: "24px",
+      fontSize: "20px",
     },
   },
   content: {
     paddingTop: "35px",
     fontSize: "20px",
-    "@media (max-width: 1000px)": {
+    "@media (max-width: 1200px)": {
       fontSize: "15px",
     },
     "@media (max-width: 600px)": {
       fontSize: "10px",
+      paddingTop: "10px",
     },
   },
   highlight: {

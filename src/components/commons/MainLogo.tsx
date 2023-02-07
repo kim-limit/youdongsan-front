@@ -8,22 +8,26 @@ const useStyles = makeStyles({
     width: "420px",
     cursor: "pointer",
     paddingLeft: "30px",
+    display: "flex",
+    alignItems: "center",
+    "@media (max-width: 600px)": {
+      paddingLeft: "20px",
+    },
   },
   img: {
     width: "100%",
     height: "100%",
     "@media (max-width: 600px)": {
-      width: "80%",
-      height: "80%",
+      width: "70%",
+      height: "50%",
     },
   },
 });
 
 export const MainLogo = () => {
   const classes = useStyles();
-  const navigate = useNavigate();
   const buttonHandler = () => {
-    navigate("/");
+    window.location.href = "/";
   };
   return (
     <div className={classes.root} onClick={buttonHandler}>

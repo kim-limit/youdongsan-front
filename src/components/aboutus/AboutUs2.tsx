@@ -9,9 +9,18 @@ const useStyles = makeStyles({
     fontSize: "70px",
     paddingBottom: "50px",
     letterSpacing: "6px",
+    "@media (max-width: 600px)": {
+      fontSize: "20px",
+      paddingBottom: "10px",
+      letterSpacing: "2px",
+    },
   },
   content: {
     lineHeight: "40px",
+    "@media (max-width: 600px)": {
+      fontSize: "10px",
+      lineHeight: "30px",
+    },
   },
   highlight: {
     color: "#4EC5D6",

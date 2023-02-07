@@ -14,9 +14,9 @@ const useStyles = makeStyles({
     width: "228px",
     height: "228px",
     "@media (max-width: 600px)": {
-      width: "120px",
-      height: "120px",
-      fontSize: "20px",
+      width: "80px",
+      height: "80px",
+      fontSize: "10px",
     },
     borderRadius: "50%",
     backgroundColor: "#6fc4d0",

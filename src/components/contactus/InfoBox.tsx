@@ -10,6 +10,11 @@ const useStyles = makeStyles({
     justifyContent: "center",
     alignItems: "center",
     margin: "10px",
+    "@media (max-width: 600px)": {
+      fontSize: "15px",
+      width: "300px",
+      height: "40px",
+    },
   },
 });
 

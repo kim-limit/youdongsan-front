@@ -10,7 +10,7 @@ const useStyles = makeStyles({
   },
   head: {
     fontSize: "48px",
-    paddingBottom: "100px",
+    paddingBottom: "300px",
     "@media (max-width: 600px)": {
       fontSize: "18px",
     },
@@ -31,12 +31,16 @@ const useStyles = makeStyles({
     backgroundSize: "contain",
     backgroundRepeat: "no-repeat",
   },
+  title: {
+    paddingBottom: "100px",
+  },
 });
 export const Section5 = () => {
   const classes = useStyles();
   return (
     <div className={`${classes.root} ${classes.img}`}>
       <div className={classes.head}>
+        <div className={classes.title}>{"[수익성]"}</div>
         <div className={classes.grey}> {"우량한"}</div>
         <div>{"돈 되는 투자"}</div>
       </div>
