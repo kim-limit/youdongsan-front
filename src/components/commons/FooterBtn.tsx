@@ -1,6 +1,5 @@
 import { makeStyles } from "@mui/styles";
 import { useNavigate } from "react-router-dom";
-import Insta from "../../assets/Insta.svg";
 
 const useStyles = makeStyles({
   root: {

@@ -7,7 +7,7 @@ import { HomePage } from "./pages/HomePage";
 import { NoticePage } from "./pages/NoticePage";
 import { CssBaseline, ThemeProvider } from "@material-ui/core";
 import { NavBar } from "./components/commons/NavBar";
-import { Footer } from "./components/commons/Footer";
+import { AppBar } from "./components/commons/AppBar";
 import { MenuContainer } from "./components/commons/MenuContainer";
 import { AboutUsPage } from "./pages/AboutUsPage";
 import { ContactUsPage } from "./pages/ContactUsPage";
@@ -31,7 +31,7 @@ function App() {
           <Route path="/faq" element={<FaqPage />} />
           <Route path="/contact" element={<ContactUsPage />} />
         </Routes>
-        <Footer />
+        <AppBar />
       </ThemeProvider>
     </StylesProvider>
   );

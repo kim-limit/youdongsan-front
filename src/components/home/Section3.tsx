@@ -1,4 +1,5 @@
 import { makeStyles } from "@mui/styles";
+import { Fade } from "react-awesome-reveal";
 
 const useStyles = makeStyles({
   root: {},
@@ -33,19 +34,23 @@ export const Section3 = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <div className={classes.title}>{"[선순위 투자란?]"}</div>
-      <div className={classes.content}>
-        <div>
-          {"선순위 투자는 투자 시 원금과 이자를 "}{" "}
-          <span className={classes.hightlight}>{"가장 먼저"}</span>
-          {" 받을 수 있는 투자입니다"}
+      <Fade duration={2000} cascade>
+        <div className={classes.title}>{"[선순위 투자란?]"}</div>
+        <div className={classes.content}>
+          <Fade cascade duration={2500}>
+            <div>
+              {"선순위 투자는 투자 시 원금과 이자를 "}{" "}
+              <span className={classes.hightlight}>{"가장 먼저"}</span>
+              {" 받을 수 있는 투자입니다"}
+            </div>
+            <div>{"우선순위로 투자금을 회수 할 수 있기 때문에,"}</div>
+            <div>
+              <span className={classes.hightlight}>{"수익률 대비 안전"}</span>
+              {"하다는 특징을 가지고 있습니다."}
+            </div>
+          </Fade>
         </div>
-        <div>{"우선순위로 투자금을 회수 할 수 있기 때문에,"}</div>
-        <div>
-          <span className={classes.hightlight}>{"수익률 대비 안전"}</span>
-          {"하다는 특징을 가지고 있습니다."}
-        </div>
-      </div>
+      </Fade>
     </div>
   );
 };

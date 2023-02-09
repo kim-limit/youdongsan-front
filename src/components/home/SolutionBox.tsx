@@ -1,5 +1,6 @@
 import { makeStyles } from "@mui/styles";
 import { lineHeight } from "@mui/system";
+import { Fade } from "react-awesome-reveal";
 
 const useStyles = makeStyles({
   root: {
@@ -40,11 +41,13 @@ export const SolutionBox = ({
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <div className={classes.head}>{head}</div>
-      <div className={classes.content}>
-        <div>{firstLine}</div>
-        <div>{secondLine}</div>
-      </div>
+      <Fade cascade duration={1000}>
+        <div className={classes.head}>{head}</div>
+        <div className={classes.content}>
+          <div>{firstLine}</div>
+          <div>{secondLine}</div>
+        </div>
+      </Fade>
       <div></div>
     </div>
   );

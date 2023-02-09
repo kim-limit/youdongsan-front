@@ -1,4 +1,5 @@
 import { makeStyles } from "@mui/styles";
+import { Fade } from "react-awesome-reveal";
 import Graph from "../../assets/Graph.png";
 const useStyles = makeStyles({
   root: {
@@ -40,16 +41,20 @@ export const Section5 = () => {
   return (
     <div className={`${classes.root} ${classes.img}`}>
       <div className={classes.head}>
-        <div className={classes.title}>{"[수익성]"}</div>
-        <div className={classes.grey}> {"우량한"}</div>
-        <div>{"돈 되는 투자"}</div>
+        <Fade cascade duration={1500}>
+          <div className={classes.title}>{"[수익성]"}</div>
+          <div className={classes.grey}> {"우량한"}</div>
+          <div>{"돈 되는 투자"}</div>
+        </Fade>
       </div>
       <div className={classes.content}>
-        <div>{"평균 6.5%~8.5%,"}</div>
-        <div>
-          <span className={classes.grey}>{"예적금 대비"}</span>
-          {" 2~3% 높은 수익"}
-        </div>
+        <Fade cascade delay={2300} duration={1500}>
+          <div>{"평균 6.5%~8.5%,"}</div>
+          <div>
+            <span className={classes.grey}>{"예적금 대비"}</span>
+            {" 2~3% 높은 수익"}
+          </div>
+        </Fade>
       </div>
     </div>
   );

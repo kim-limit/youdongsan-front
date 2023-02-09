@@ -11,7 +11,7 @@ const useStyles = makeStyles({
     width: "100%",
   },
   inner: {
-    marginRight: "40px",
+    marginRight: "10px",
   },
   img: {
     width: "80%",
@@ -34,7 +34,7 @@ const customAnimationLeft = keyframes`
 const customAnimationRight = keyframes`
   from {
     opacity: 0;
-    transform: translate3d(-200px, 0, 0);
+    transform: translate3d(-150px, 0, 0);
   }
 
   to {
@@ -57,12 +57,12 @@ export const AppImgConatiner = ({
   return (
     <div className={classes.root}>
       <div className={classes.inner}>
-        <Reveal keyframes={customAnimationLeft} duration={1500}>
+        <Reveal keyframes={customAnimationLeft} duration={1500} delay={500}>
           <img className={classes.img} src={leftImg} />
         </Reveal>
       </div>
       <div>
-        <Reveal keyframes={customAnimationRight} duration={1500}>
+        <Reveal keyframes={customAnimationRight} duration={1500} delay={500}>
           <img className={classes.img} src={rightImg} />
         </Reveal>
       </div>

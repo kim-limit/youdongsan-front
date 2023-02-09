@@ -1,4 +1,5 @@
 import { makeStyles } from "@mui/styles";
+import { Fade } from "react-awesome-reveal";
 import { SolutionItem } from "./SolutionItem";
 
 const useStyles = makeStyles({
@@ -30,13 +31,19 @@ export const Section8 = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <div className={classes.title}>{"SOLUTION"}</div>
-      <div className={classes.explain}>{"유동신이 제공하는 5가지 솔루션"}</div>
-      <div className={classes.content}>
-        <SolutionItem text={"환금성"} firstLine={""} secondLine={""} />
-        <SolutionItem text={"소액투자"} firstLine={""} secondLine={""} />
-        <SolutionItem text={"일할정산"} firstLine={""} secondLine={""} />
-      </div>
+      <Fade cascade>
+        <div className={classes.title}>{"SOLUTION"}</div>
+        <div className={classes.explain}>
+          {"유동신이 제공하는 3가지 솔루션"}
+        </div>
+        <div className={classes.content}>
+          <Fade cascade delay={1000}>
+            <SolutionItem text={"환금성"} />
+            <SolutionItem text={"소액투자"} />
+            <SolutionItem text={"일할정산"} />
+          </Fade>
+        </div>
+      </Fade>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import { keyframes } from "@emotion/react";
 import { makeStyles } from "@mui/styles";
-import { Fade, Reveal } from "react-awesome-reveal";
+import { Reveal } from "react-awesome-reveal";
 
 const useStyles = makeStyles({
   root: {

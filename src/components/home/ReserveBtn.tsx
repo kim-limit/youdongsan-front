@@ -1,5 +1,5 @@
 import { makeStyles } from "@mui/styles";
-import { useNavigate } from "react-router-dom";
+import { Fade } from "react-awesome-reveal";
 
 const useStyles = makeStyles({
   root: {
@@ -41,14 +41,16 @@ export const ReserveBtn = ({ handleToReserve }: IReserveBtnProps) => {
 
   return (
     <>
-      <div className={classses.root} onClick={handleToReserve}>
-        <div>{"사전 예약하기"}</div>
-      </div>
-      <div className={classses.text}>
-        {
-          "지금 신청하시는 6,000명께 1년 간 거래수수료 50% 할인 혜택을 들립니다."
-        }
-      </div>
+      <Fade duration={2500}>
+        <div className={classses.root} onClick={handleToReserve}>
+          <div>{"사전 예약하기"}</div>
+        </div>
+        <div className={classses.text}>
+          {
+            "지금 신청하시는 6,000명께 1년 간 거래수수료 50% 할인 혜택을 들립니다."
+          }
+        </div>
+      </Fade>
     </>
   );
 };

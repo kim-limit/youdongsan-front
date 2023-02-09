@@ -1,5 +1,6 @@
 import { Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
+import { Fade } from "react-awesome-reveal";
 import AppImg1 from "../../assets/AppImg1.png";
 import AppImg2 from "../../assets/AppImg2.png";
 import { AppImgConatiner } from "./AppImgConatiner";
