@@ -1,5 +1,6 @@
 import { Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
+import { IReserveProps } from "../../interface/reserve";
 import { ReserveInputGroup } from "./ReserveInputGroup";
 
 const useStyles = makeStyles({
@@ -59,7 +60,13 @@ const useStyles = makeStyles({
   },
 });
 
-export const Section12 = () => {
+interface ISection12Props {
+  info: IReserveProps;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onClick: () => void;
+}
+
+export const Section12 = ({ info, onChange, onClick }: ISection12Props) => {
   const classes = useStyles();
   return (
     <Grid container>
@@ -94,13 +101,23 @@ export const Section12 = () => {
           <div className={classes.btn}>{"오픈카톡방 바로가기"}</div>
           <div className={classes.checkbox}>
             <div>
-              <input type={"checkbox"} />
+              <input
+                name={"firstCheck"}
+                checked={info.firstCheck}
+                type={"checkbox"}
+                onChange={onChange}
+              />
               {
                 "유동산 서비스 출시 이후, 사전예약과 동일한 정보로 투자 계좌개설까지 완료되면 투자 포인트가 지급됩니다."
               }
             </div>
             <div>
-              <input type={"checkbox"} />
+              <input
+                name={"secondCheck"}
+                checked={info.firstCheck}
+                type={"checkbox"}
+                onChange={onChange}
+              />
               {
                 "서비스 안내 및 이벤트 혜택 제공을 위한 개인정보 수집에 동의합니다."
               }
@@ -109,7 +126,7 @@ export const Section12 = () => {
         </div>
       </Grid>
       <Grid item sm={4} xs={12}>
-        <ReserveInputGroup />
+        <ReserveInputGroup info={info} onChange={onChange} onClick={onClick} />
       </Grid>
     </Grid>
   );

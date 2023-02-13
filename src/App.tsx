@@ -11,6 +11,9 @@ import { AppBar } from "./components/commons/AppBar";
 import { MenuContainer } from "./components/commons/MenuContainer";
 import { AboutUsPage } from "./pages/AboutUsPage";
 import { ContactUsPage } from "./pages/ContactUsPage";
+import { QueryClient, QueryClientProvider } from "react-query";
+
+const queryClient = new QueryClient();
 
 function App() {
   const [isToggle, setIsToggle] = useState(false);
@@ -24,13 +27,15 @@ function App() {
         <CssBaseline />
         <NavBar isToggle={isToggle} handleIsToggle={handleIsToggle} />
         <MenuContainer isToggle={isToggle} handleIsToggle={handleIsToggle} />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutUsPage />} />
-          <Route path="/notice" element={<NoticePage />} />
-          <Route path="/faq" element={<FaqPage />} />
-          <Route path="/contact" element={<ContactUsPage />} />
-        </Routes>
+        <QueryClientProvider client={queryClient}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutUsPage />} />
+            <Route path="/notice" element={<NoticePage />} />
+            <Route path="/faq" element={<FaqPage />} />
+            <Route path="/contact" element={<ContactUsPage />} />
+          </Routes>
+        </QueryClientProvider>
         <AppBar />
       </ThemeProvider>
     </StylesProvider>

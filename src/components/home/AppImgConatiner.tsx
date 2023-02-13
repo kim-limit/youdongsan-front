@@ -58,12 +58,12 @@ export const AppImgConatiner = ({
     <div className={classes.root}>
       <div className={classes.inner}>
         <Reveal keyframes={customAnimationLeft} duration={1500} delay={500}>
-          <img className={classes.img} src={leftImg} />
+          <img className={classes.img} src={leftImg} alt={""} />
         </Reveal>
       </div>
       <div>
         <Reveal keyframes={customAnimationRight} duration={1500} delay={500}>
-          <img className={classes.img} src={rightImg} />
+          <img className={classes.img} src={rightImg} alt={""} />
         </Reveal>
       </div>
     </div>

@@ -71,6 +71,7 @@ export const MenuList = ({ handleIsToggle }: IMenuListProps) => {
             onClick={() => {
               handleNavigate(item.path);
             }}
+            key={item.text}
           >
             {item.text}
           </p>

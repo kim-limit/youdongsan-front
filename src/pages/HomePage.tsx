@@ -13,12 +13,65 @@ import { Section7 } from "../components/home/Section7";
 import { Section9 } from "../components/home/Section9";
 import { Section10 } from "../components/home/Section10";
 import { Section11 } from "../components/home/Section11";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Footer } from "../components/commons/Footer";
 import ".././App.css";
+import { IReserveProps } from "../interface/reserve";
+import { useReserve } from "../hooks/use-reserve";
 
 export const HomePage = () => {
-  const [isRender, setIsRender] = useState(false);
+  const [isShow, setIsShow] = useState(false);
+  const [reserveInfo, setReserveInfo] = useState<IReserveProps>({
+    name: "",
+    number: "",
+    email: "",
+    firstCheck: false,
+    secondCheck: false,
+  });
+
+  const handleChangeInfo = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    console.log(value);
+    setReserveInfo({
+      ...reserveInfo,
+      [name]:
+        name === "firstCheck" || name === "secondCheck"
+          ? e.target.checked
+          : value,
+    });
+  };
+
+  const { reserveHandler, data, isLoading, isSuccess, isError } =
+    useReserve(reserveInfo);
+
+  useEffect(() => {
+    if (isSuccess) {
+      alert("사전 예약이 완료되었습니다!");
+      setReserveInfo({
+        ...reserveInfo,
+        name: "",
+        number: "",
+        email: "",
+        firstCheck: false,
+        secondCheck: false,
+      });
+    }
+  }, [isSuccess]);
+
+  useEffect(() => {
+    if (isError) {
+      alert("사전 예약이 실패하였습니다.");
+      setReserveInfo({
+        ...reserveInfo,
+        name: "",
+        number: "",
+        email: "",
+        firstCheck: false,
+        secondCheck: false,
+      });
+    }
+  }, [isError]);
+
   return (
     <ReactFullpage
       //fullpage options
@@ -40,10 +93,10 @@ export const HomePage = () => {
         "13",
       ]}
       afterLoad={() => {
-        setIsRender(true);
+        setIsShow(true);
       }}
       onLeave={() => {
-        setIsRender(false);
+        setIsShow(false);
       }}
       render={({ state, fullpageApi }) => {
         const handleToReserve = () => {
@@ -52,77 +105,77 @@ export const HomePage = () => {
         return (
           <ReactFullpage.Wrapper>
             <div className={`section`}>
-              <div className={`root ${isRender ? "show" : "leave"}`}>
+              <div className={`root ${isShow ? "show" : "leave"}`}>
                 <MainContainer>
                   <Section1 handleToReserve={handleToReserve} />
                 </MainContainer>
               </div>
             </div>
             <div className={`section`}>
-              <div className={`root ${isRender ? "show" : "leave"}`}>
+              <div className={`root ${isShow ? "show" : "leave"}`}>
                 <MainContainer>
                   <Section2 />
                 </MainContainer>
               </div>
             </div>
             <div className={"section"}>
-              <div className={`root ${isRender ? "show" : "leave"}`}>
+              <div className={`root ${isShow ? "show" : "leave"}`}>
                 <MainContainer>
                   <Section3 />
                 </MainContainer>
               </div>
             </div>
             <div className={"section"}>
-              <div className={`root ${isRender ? "show" : "leave"}`}>
+              <div className={`root ${isShow ? "show" : "leave"}`}>
                 <MainContainer>
                   <Section4 />
                 </MainContainer>
               </div>
             </div>
             <div className={`section `}>
-              <div className={`root ${isRender ? "show" : "leave"}`}>
+              <div className={`root ${isShow ? "show" : "leave"}`}>
                 <MainContainer>
                   <Section5 />
                 </MainContainer>
               </div>
             </div>
             <div className={"section"}>
-              <div className={`root ${isRender ? "show" : "leave"}`}>
+              <div className={`root ${isShow ? "show" : "leave"}`}>
                 <BackgroundContainer isLeft={true}>
                   <Section6 />
                 </BackgroundContainer>
               </div>
             </div>
             <div className={"section"}>
-              <div className={`root ${isRender ? "show" : "leave"}`}>
+              <div className={`root ${isShow ? "show" : "leave"}`}>
                 <BackgroundContainer isLeft={false}>
                   <Section7 />
                 </BackgroundContainer>
               </div>
             </div>
             <div className={"section"}>
-              <div className={`root ${isRender ? "show" : "leave"}`}>
+              <div className={`root ${isShow ? "show" : "leave"}`}>
                 <MainContainer>
                   <Section8 />
                 </MainContainer>
               </div>
             </div>
             <div className={"section"}>
-              <div className={`root ${isRender ? "show" : "leave"}`}>
+              <div className={`root ${isShow ? "show" : "leave"}`}>
                 <MainContainer>
                   <Section9 />
                 </MainContainer>
               </div>
             </div>
             <div className={"section"}>
-              <div className={`root ${isRender ? "show" : "leave"}`}>
+              <div className={`root ${isShow ? "show" : "leave"}`}>
                 <MainContainer>
                   <Section10 />
                 </MainContainer>
               </div>
             </div>
             <div className={"section"}>
-              <div className={`root ${isRender ? "show" : "leave"}`}>
+              <div className={`root ${isShow ? "show" : "leave"}`}>
                 <MainContainer>
                   <Section11 />
                 </MainContainer>
@@ -130,12 +183,16 @@ export const HomePage = () => {
             </div>
             <div className={"section"}>
               <MainContainer>
-                <Section12 />
+                <Section12
+                  info={reserveInfo}
+                  onChange={handleChangeInfo}
+                  onClick={reserveHandler}
+                />
               </MainContainer>
             </div>
-            {/* <div className={"section"}>
+            <div className={"section"}>
               <Footer />
-            </div> */}
+            </div>
           </ReactFullpage.Wrapper>
         );
       }}

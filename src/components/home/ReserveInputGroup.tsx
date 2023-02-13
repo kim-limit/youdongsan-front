@@ -1,4 +1,5 @@
 import { makeStyles } from "@mui/styles";
+import { IReserveProps } from "../../interface/reserve";
 
 const useStyles = makeStyles({
   root: {
@@ -43,6 +44,7 @@ const useStyles = makeStyles({
     alignItems: "center",
     justifyContent: "center",
     marginTop: "20px",
+    cursor: "pointer",
     "@media (max-width: 1100px)": {
       height: "50px",
     },
@@ -53,26 +55,53 @@ const useStyles = makeStyles({
     },
   },
 });
-export const ReserveInputGroup = () => {
+
+interface IReserveInputGroupProps {
+  info: IReserveProps;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onClick: () => void;
+}
+export const ReserveInputGroup = ({
+  info,
+  onChange,
+  onClick,
+}: IReserveInputGroupProps) => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
       <div className={classes.inner}>
         <div>{"이름"}</div>
-        <input className={classes.input} placeholder={"이름 입력"}></input>
+        <input
+          name={"name"}
+          className={classes.input}
+          placeholder={"이름 입력"}
+          value={info.name}
+          onChange={onChange}
+        ></input>
       </div>
       <div className={classes.inner}>
         <div>{"휴대폰 번호"}</div>
         <input
+          name={"number"}
           className={classes.input}
           placeholder={"휴대폰 번호 입력"}
+          value={info.number}
+          onChange={onChange}
         ></input>
       </div>
       <div className={classes.inner}>
         <div>{"이메일"}</div>
-        <input className={classes.input} placeholder={"이메일 입력"}></input>
+        <input
+          name={"email"}
+          className={classes.input}
+          placeholder={"이메일 입력"}
+          value={info.email}
+          onChange={onChange}
+        ></input>
       </div>
-      <div className={classes.btn}>{"사전예약하기"}</div>
+      <div className={classes.btn} onClick={onClick}>
+        {"사전예약하기"}
+      </div>
     </div>
   );
 };

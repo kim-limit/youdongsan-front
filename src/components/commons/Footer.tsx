@@ -24,13 +24,34 @@ const useStyles = makeStyles({
     color: "#ffffff",
     fontWeight: "bold",
   },
+  btn: {
+    display: "flex",
+    width: "200px",
+    justifyContent: "space-between",
+  },
+  title: {
+    display: "flex",
+    justifyContent: "space-between",
+  },
 });
 
 export const Footer = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <strong className={classes.head}>{"유동산"}</strong>
+      <div className={classes.title}>
+        <strong className={classes.head}>{"유동산"}</strong>
+        <div className={classes.btn}>
+          <FooterBtn img={Apple} path={"/"} width={"50px"} height={"50px"} />
+          <FooterBtn
+            img={PlayStore}
+            path={"/"}
+            width={"50px"}
+            height={"50px"}
+          />
+          <FooterBtn img={Insta} path={"/"} width={"50px"} height={"50px"} />
+        </div>
+      </div>
       <div className={classes.address}>
         <p>
           {
@@ -38,11 +59,6 @@ export const Footer = () => {
           }
         </p>
         <p>{"사업장 주소 : 서울특별시 마포구 대흥로 67(정신빌딩) 401호"}</p>
-        <div>
-          <FooterBtn img={Apple} path={"/"} />
-          <FooterBtn img={PlayStore} path={"/"} />
-          <FooterBtn img={Insta} path={"/"} />
-        </div>
       </div>
       <hr />
       <div className={classes.bottom}>
