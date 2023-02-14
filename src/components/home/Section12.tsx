@@ -2,6 +2,7 @@ import { Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { IReserveProps } from "../../interface/reserve";
 import { ReserveInputGroup } from "./ReserveInputGroup";
+import Check from "../../assets/Check.png";
 
 const useStyles = makeStyles({
   title: {
@@ -11,7 +12,7 @@ const useStyles = makeStyles({
       fontSize: "20px",
     },
     "@media (max-width: 600px)": {
-      fontSize: "16px",
+      fontSize: "15px",
     },
   },
   content: {
@@ -24,7 +25,7 @@ const useStyles = makeStyles({
       fontSize: "15px",
     },
     "@media (max-width: 600px)": {
-      fontSize: "10px",
+      zoom: "0.7",
       paddingTop: "10px",
     },
   },
@@ -55,8 +56,13 @@ const useStyles = makeStyles({
     },
     "@media (max-width: 600px)": {
       paddingTop: "10px",
-      zoom: "0.6",
+      zoom: "0.8",
     },
+  },
+  check: {
+    width: "15px",
+    height: "15px",
+    marginRight: "10px",
   },
 });
 
@@ -101,23 +107,13 @@ export const Section12 = ({ info, onChange, onClick }: ISection12Props) => {
           <div className={classes.btn}>{"오픈카톡방 바로가기"}</div>
           <div className={classes.checkbox}>
             <div>
-              <input
-                name={"firstCheck"}
-                checked={info.firstCheck}
-                type={"checkbox"}
-                onChange={onChange}
-              />
+              <img className={classes.check} src={Check} />
               {
                 "유동산 서비스 출시 이후, 사전예약과 동일한 정보로 투자 계좌개설까지 완료되면 투자 포인트가 지급됩니다."
               }
             </div>
             <div>
-              <input
-                name={"secondCheck"}
-                checked={info.firstCheck}
-                type={"checkbox"}
-                onChange={onChange}
-              />
+              <img className={classes.check} src={Check} />
               {
                 "서비스 안내 및 이벤트 혜택 제공을 위한 개인정보 수집에 동의합니다."
               }

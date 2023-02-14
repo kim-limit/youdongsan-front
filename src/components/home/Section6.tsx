@@ -75,7 +75,7 @@ export const Section6 = () => {
   return (
     <div className={classes.root}>
       <div className={classes.inner}>
-        <Fade delay={1000}>
+        <Fade delay={1000} duration={250}>
           <div className={classes.step1}>
             <StepText
               step={1}
@@ -84,14 +84,14 @@ export const Section6 = () => {
             />
           </div>
         </Fade>
-        <Fade delay={500}>
+        <Fade delay={500} duration={1000}>
           <div className={classes.head}>
             <div>{"건물을 지을때 투자하여"}</div>
             <div>{"가장 먼저 투자금을 회수하는 시장"}</div>
           </div>
         </Fade>
       </div>
-      <Fade cascade delay={1500} duration={1000}>
+      <Fade cascade delay={1500} duration={500}>
         <div className={classes.step2}>
           <StepText
             step={2}

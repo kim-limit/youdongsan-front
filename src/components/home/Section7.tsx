@@ -75,7 +75,7 @@ export const Section7 = () => {
             <div>{"가장 먼저 투자금을 회수하는 시장"}</div>
           </div>
         </Fade>
-        <Fade delay={1500}>
+        <Fade delay={1000}>
           <div className={classes.step2}>
             <StepText
               step={2}

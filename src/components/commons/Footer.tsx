@@ -7,31 +7,47 @@ import Apple from "../../assets/Apple.svg";
 const useStyles = makeStyles({
   root: {
     height: "40vh",
-    width: "100vw",
-    padding: "0 200px",
+    width: "80vw",
   },
   head: {
     fontSize: "25px",
     color: "#ffffff",
+    "@media (max-width: 600px)": {
+      fontSize: "18px",
+    },
   },
   address: {
     fontSize: "18px",
     color: "grey",
     fontWeight: "bold",
+    "@media (max-width: 600px)": {
+      fontSize: "10px",
+    },
   },
   bottom: {
     fontSize: "18px",
     color: "#ffffff",
     fontWeight: "bold",
+    "@media (max-width: 600px)": {
+      fontSize: "10px",
+    },
   },
   btn: {
     display: "flex",
     width: "200px",
     justifyContent: "space-between",
+    "@media (max-width: 600px)": {
+      width: "100%",
+      justifyContent: "space-around",
+      paddingBottom: "50px",
+    },
   },
   title: {
     display: "flex",
     justifyContent: "space-between",
+    "@media (max-width: 600px)": {
+      flexDirection: "column-reverse",
+    },
   },
 });
 
@@ -53,22 +69,14 @@ export const Footer = () => {
         </div>
       </div>
       <div className={classes.address}>
-        <p>
-          {
-            "대표자 : 이환희•개인정보책임관리자 : 이환희•사업자번호 : 332-87-00895"
-          }
-        </p>
-        <p>{"사업장 주소 : 서울특별시 마포구 대흥로 67(정신빌딩) 401호"}</p>
+        <p>{"대표이사 : 오 준 식•법인등록번호 : 110111-8498465"}</p>
+        <p>{"사업장 주소 : 서울특별시 영등포구 여의대방로 65길 20, 1101호"}</p>
       </div>
       <hr />
       <div className={classes.bottom}>
         <p>{"이용약관 | 개인정보처리방침 | FAQ | 공지사항"}</p>
-        <p>{"문의전화 070-7808-4211•기타문의 pawinhand@naver.com"}</p>
-        <p>
-          {
-            "©포인핸드 제공 • ©Pawinhankteam all right reserved • 데이터 출처 : 농립축산식품부"
-          }
-        </p>
+        <p>{"기타 문의 : adm.youdongsan@gmail.com"}</p>
+        <p>{"©유동산 제공 • ©Youdongsan all right reserved"}</p>
       </div>
     </div>
   );

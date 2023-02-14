@@ -51,7 +51,7 @@ export const IntroduceText = () => {
 
   return (
     <div className={classes.root}>
-      <Reveal keyframes={customAnimation} duration={1200} delay={500}>
+      <Reveal keyframes={customAnimation} duration={1200}>
         <div className={classes.title}>
           {"은행에 "} <span className={classes.highlight}>{"돈"}</span>
           {" 맡기지 마세요!"}
@@ -62,7 +62,7 @@ export const IntroduceText = () => {
           {" 하세요"}
         </div>
       </Reveal>
-      <Reveal keyframes={customAnimation} duration={1500} delay={500}>
+      <Reveal keyframes={customAnimation} duration={1500}>
         <div className={classes.content}>
           {"투자한 돈 가장 먼저 돌려받는 부동산 선순위 투자"}
         </div>

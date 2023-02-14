@@ -34,10 +34,10 @@ export const Section3 = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Fade duration={2000} cascade>
+      <Fade duration={1000} cascade>
         <div className={classes.title}>{"[선순위 투자란?]"}</div>
         <div className={classes.content}>
-          <Fade cascade duration={2500}>
+          <Fade cascade duration={1500}>
             <div>
               {"선순위 투자는 투자 시 원금과 이자를 "}{" "}
               <span className={classes.hightlight}>{"가장 먼저"}</span>

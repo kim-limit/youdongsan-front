@@ -37,7 +37,7 @@ export const Section8 = () => {
           {"유동신이 제공하는 3가지 솔루션"}
         </div>
         <div className={classes.content}>
-          <Fade cascade delay={1000}>
+          <Fade cascade delay={500}>
             <SolutionItem text={"환금성"} />
             <SolutionItem text={"소액투자"} />
             <SolutionItem text={"일할정산"} />

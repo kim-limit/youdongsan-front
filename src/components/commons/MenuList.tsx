@@ -52,13 +52,17 @@ export const MenuList = ({ handleIsToggle }: IMenuListProps) => {
   const buttonList = [
     { text: "HOME", path: "/" },
     { text: "ABOUT US", path: "/about" },
-    { text: "NOTICE", path: "/notice" },
-    { text: "FAQ", path: "/faq" },
+    { text: "NOTICE", path: "/not" },
+    { text: "FAQ", path: "/not" },
     { text: "CONTACT US", path: "/contact" },
   ];
   const handleNavigate = (path: string) => {
-    navigate(path);
-    handleIsToggle();
+    if (path === "/not") {
+      alert("준비중인 기능입니다");
+    } else {
+      navigate(path);
+      handleIsToggle();
+    }
   };
   return (
     <>

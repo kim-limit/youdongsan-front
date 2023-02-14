@@ -9,11 +9,18 @@ const useStyles = makeStyles({
     justifyContent: "center",
     alignItems: "center",
   },
+  titleContainer: {
+    textAlign: "end",
+    paddingRight: "250px",
+    "@media (max-width: 600px)": {
+      textAlign: "center",
+      paddingRight: "0",
+    },
+  },
   title: {
     fontSize: "48px",
-    paddingTop: "43px",
     "@media (max-width: 600px)": {
-      fontSize: "16px",
+      fontSize: "20px",
       paddingTop: "20px",
     },
   },
@@ -36,7 +43,6 @@ const useStyles = makeStyles({
     justifyContent: "center",
   },
   text: {
-    paddingBottom: "130px",
     "@media (max-width: 600px)": {
       paddingBottom: "0px",
     },
@@ -46,14 +52,18 @@ export const Section4 = () => {
   const classes = useStyles();
   return (
     <Grid className={classes.root} container>
+      <Fade duration={1500}>
+        <Grid className={classes.titleContainer} item sm={12}>
+          <div className={classes.title}>{"[안정성]"}</div>
+        </Grid>
+      </Fade>
       <Grid className={classes.img} item sm={7}>
-        <Fade duration={4000}>
+        <Fade duration={2000}>
           <img className={classes.img} src={Money} />
         </Fade>
       </Grid>
       <Grid className={classes.text} item sm={5}>
-        <Fade duration={1500} cascade>
-          <div className={classes.title}>{"[안정성]"}</div>
+        <Fade duration={1000} cascade>
           <div className={`${classes.title} ${classes.grey}`}>{"새로운"}</div>
           <div className={`${classes.content} ${classes.grey}`}>
             {"수백억대 자산가와 기관만 참여했던 기회"}

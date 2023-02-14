@@ -27,7 +27,7 @@ export const Section2 = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Fade cascade duration={2500}>
+      <Fade cascade duration={1000}>
         <div className={classes.text}>
           <div>{"접근조차 못하던, 안전한"}</div>
           <div>

@@ -25,24 +25,26 @@ export const HomePage = () => {
     name: "",
     number: "",
     email: "",
-    firstCheck: false,
-    secondCheck: false,
   });
 
   const handleChangeInfo = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    console.log(value);
     setReserveInfo({
       ...reserveInfo,
-      [name]:
-        name === "firstCheck" || name === "secondCheck"
-          ? e.target.checked
-          : value,
+      [name]: value,
     });
   };
 
-  const { reserveHandler, data, isLoading, isSuccess, isError } =
-    useReserve(reserveInfo);
+  const { reserve, isSuccess, isError } = useReserve();
+
+  const expEmail = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
+  const expPhone = /01[016789]-[^0][0-9]{2,3}-[0-9]{3,4}/;
+
+  const reserveHandler = () => {
+    !expEmail.test(reserveInfo.email) || !expPhone.test(reserveInfo.number)
+      ? alert("다시 입력")
+      : reserve(reserveInfo);
+  };
 
   useEffect(() => {
     if (isSuccess) {
@@ -52,8 +54,6 @@ export const HomePage = () => {
         name: "",
         number: "",
         email: "",
-        firstCheck: false,
-        secondCheck: false,
       });
     }
   }, [isSuccess]);
@@ -66,8 +66,6 @@ export const HomePage = () => {
         name: "",
         number: "",
         email: "",
-        firstCheck: false,
-        secondCheck: false,
       });
     }
   }, [isError]);
@@ -191,7 +189,9 @@ export const HomePage = () => {
               </MainContainer>
             </div>
             <div className={"section"}>
-              <Footer />
+              <MainContainer>
+                <Footer />
+              </MainContainer>
             </div>
           </ReactFullpage.Wrapper>
         );
