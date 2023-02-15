@@ -29,7 +29,7 @@ export const AboutUs = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Fade cascade duration={1500}>
+      <Fade cascade duration={1000}>
         <div className={classes.title}>{"ABOUT US"}</div>
         <div className={classes.content}>
           <div>

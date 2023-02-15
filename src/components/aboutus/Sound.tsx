@@ -24,9 +24,9 @@ export const Sound = ({ fontColor, text }: ISoundProps) => {
   return (
     <div
       className={`${classes.root} ${
-        fontColor == "white"
+        fontColor === "white"
           ? ""
-          : fontColor == "red"
+          : fontColor === "red"
           ? classes.red
           : classes.mint
       }`}

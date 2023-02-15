@@ -5,14 +5,17 @@ import { BudongSan } from "../components/aboutus/Budongsan";
 import { MainContainer } from "../components/commons/MainContainer";
 import ".././App.css";
 import { useState } from "react";
+import { FooterContainer } from "../components/commons/FooterContainer";
 
 export const AboutUsPage = () => {
   const [isRender, setIsRender] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <ReactFullpage
       //fullpage options
       licenseKey={"YOUR_KEY_HERE"}
       scrollingSpeed={700} /* Options here */
+      anchors={["1", "2", "3", "4"]}
       afterLoad={() => {
         setIsRender(true);
       }}
@@ -20,6 +23,14 @@ export const AboutUsPage = () => {
         setIsRender(false);
       }}
       render={({ state, fullpageApi }) => {
+        const handleOpen = () => {
+          setIsOpen(true);
+          fullpageApi.setAllowScrolling(false);
+        };
+        const handleClose = () => {
+          setIsOpen(false);
+          fullpageApi.setAllowScrolling(true);
+        };
         return (
           <ReactFullpage.Wrapper>
             <div className="section">
@@ -42,6 +53,13 @@ export const AboutUsPage = () => {
                   <AboutUs2 />
                 </MainContainer>
               </div>
+            </div>
+            <div className={"section"}>
+              <FooterContainer
+                isOpen={isOpen}
+                handleOpen={handleOpen}
+                handleClose={handleClose}
+              />
             </div>
           </ReactFullpage.Wrapper>
         );

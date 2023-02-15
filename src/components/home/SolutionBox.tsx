@@ -1,5 +1,4 @@
 import { makeStyles } from "@mui/styles";
-import { lineHeight } from "@mui/system";
 import { Fade } from "react-awesome-reveal";
 
 const useStyles = makeStyles({

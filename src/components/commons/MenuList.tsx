@@ -64,6 +64,7 @@ export const MenuList = ({ handleIsToggle }: IMenuListProps) => {
       handleIsToggle();
     }
   };
+  console.log(location.pathname);
   return (
     <>
       {buttonList.map((item) => {

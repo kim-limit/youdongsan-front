@@ -8,7 +8,7 @@ const useStyles = makeStyles({
   root: {
     position: "fixed",
     bottom: "0px",
-    zIndex: "100",
+    zIndex: "-1",
     height: "168px",
     width: "100vw",
     padding: "0 40px",

@@ -64,6 +64,15 @@ const useStyles = makeStyles({
     height: "15px",
     marginRight: "10px",
   },
+  link: {
+    textDecoration: "none",
+    color: "white",
+  },
+  subText: {
+    zoom: "0.8",
+    paddingLeft: "32px",
+    color: "rgba(255, 255, 255, 0.7)",
+  },
 });
 
 interface ISection12Props {
@@ -104,19 +113,33 @@ export const Section12 = ({ info, onChange, onClick }: ISection12Props) => {
             <span className={classes.highlight}>{"정보 제공"}</span>
             {"을 드리고 있습니다."}
           </div>
-          <div className={classes.btn}>{"오픈카톡방 바로가기"}</div>
+          <div className={classes.btn}>
+            <a
+              className={classes.link}
+              href="https://open.kakao.com/o/gc938IWe"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {"오픈카톡방 바로가기"}
+            </a>
+          </div>
           <div className={classes.checkbox}>
             <div>
-              <img className={classes.check} src={Check} />
+              <img className={classes.check} src={Check} alt={""} />
               {
                 "유동산 서비스 출시 이후, 사전예약과 동일한 정보로 투자 계좌개설까지 완료되면 투자 포인트가 지급됩니다."
               }
             </div>
             <div>
-              <img className={classes.check} src={Check} />
+              <img className={classes.check} src={Check} alt={""} />
               {
                 "서비스 안내 및 이벤트 혜택 제공을 위한 개인정보 수집에 동의합니다."
               }
+              <div className={classes.subText}>
+                {
+                  "사전예약 시, 서비스 개선을 위한 피드백을 요청드릴 수 있습니다."
+                }
+              </div>
             </div>
           </div>
         </div>

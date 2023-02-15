@@ -30,7 +30,7 @@ export const MainLogo = () => {
   };
   return (
     <div className={classes.root} onClick={buttonHandler}>
-      <img className={classes.img} src={Logo} />
+      <img className={classes.img} src={Logo} alt={""} />
     </div>
   );
 };

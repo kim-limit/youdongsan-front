@@ -1,5 +1,4 @@
 import { makeStyles } from "@mui/styles";
-import { useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles({
   root: {
@@ -9,6 +8,10 @@ const useStyles = makeStyles({
     alignItems: "center",
   },
   btn: {
+    height: "100%",
+    width: "100%",
+  },
+  link: {
     height: "100%",
     width: "100%",
   },
@@ -23,17 +26,11 @@ interface IFooterBtnProps {
 
 export const FooterBtn = ({ img, path, width, height }: IFooterBtnProps) => {
   const classes = useStyles();
-  const navigate = useNavigate();
-  const handleNavigate = () => {
-    navigate(path);
-  };
   return (
-    <div
-      className={classes.root}
-      onClick={handleNavigate}
-      style={{ height: height, width: width }}
-    >
-      <img className={classes.btn} src={img} alt={""} />
+    <div className={classes.root} style={{ height: height, width: width }}>
+      <a className={classes.link} href={path} target="_blank" rel="noreferrer">
+        <img className={classes.btn} src={img} alt={""} />
+      </a>
     </div>
   );
 };

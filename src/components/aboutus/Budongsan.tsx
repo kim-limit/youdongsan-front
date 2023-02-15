@@ -17,7 +17,7 @@ export const BudongSan = () => {
   return (
     <Grid container spacing={6}>
       <Grid item sm={6} xs={12}>
-        <Fade cascade>
+        <Fade cascade duration={500}>
           <div className={classes.wrapper}>
             <Chinese fontColor={"white"} text={"不"} />
             <Meaning fontColor={"red"} text={"아니"} />
@@ -36,7 +36,7 @@ export const BudongSan = () => {
         </Fade>
       </Grid>
       <Grid item sm={6} xs={12}>
-        <Fade cascade delay={1500}>
+        <Fade cascade delay={700} duration={500}>
           <div className={classes.wrapper}>
             <Chinese fontColor={"mint"} text={"流"} />
             <Meaning fontColor={"mint"} text={"흐를"} />

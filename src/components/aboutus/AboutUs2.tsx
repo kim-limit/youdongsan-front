@@ -32,7 +32,7 @@ export const AboutUs2 = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Fade cascade>
+      <Fade cascade duration={1000}>
         <div className={classes.title}>
           {"We invest to "}{" "}
           <span className={classes.highlight}>{"Change"}</span>

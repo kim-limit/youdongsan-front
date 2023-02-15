@@ -5,10 +5,10 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-export const API_URL = "http://localhost:7777";
+export const API_URL = process.env.REACT_APP_URL;
 
 axios.defaults.baseURL = API_URL;
-
+console.log(process.env.REACT_APP_URL);
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );

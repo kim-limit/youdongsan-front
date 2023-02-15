@@ -14,10 +14,10 @@ import { Section9 } from "../components/home/Section9";
 import { Section10 } from "../components/home/Section10";
 import { Section11 } from "../components/home/Section11";
 import { useEffect, useState } from "react";
-import { Footer } from "../components/commons/Footer";
 import ".././App.css";
 import { IReserveProps } from "../interface/reserve";
 import { useReserve } from "../hooks/use-reserve";
+import { FooterContainer } from "../components/commons/FooterContainer";
 
 export const HomePage = () => {
   const [isShow, setIsShow] = useState(false);
@@ -26,7 +26,7 @@ export const HomePage = () => {
     number: "",
     email: "",
   });
-
+  const [isOpen, setIsOpen] = useState(false);
   const handleChangeInfo = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setReserveInfo({
@@ -41,14 +41,18 @@ export const HomePage = () => {
   const expPhone = /01[016789]-[^0][0-9]{2,3}-[0-9]{3,4}/;
 
   const reserveHandler = () => {
-    !expEmail.test(reserveInfo.email) || !expPhone.test(reserveInfo.number)
-      ? alert("다시 입력")
-      : reserve(reserveInfo);
+    if (!expPhone.test(reserveInfo.number)) {
+      alert("휴대폰 번호를 정확하게 입력해 주세요.");
+    } else if (!expEmail.test(reserveInfo.email)) {
+      alert("이메일을 형식에 맞춰 입력해 주세요.");
+    } else {
+      reserve(reserveInfo);
+    }
   };
 
   useEffect(() => {
     if (isSuccess) {
-      alert("사전 예약이 완료되었습니다!");
+      alert("사전예약이 완료되었습니다. 감사합니다.");
       setReserveInfo({
         ...reserveInfo,
         name: "",
@@ -60,7 +64,7 @@ export const HomePage = () => {
 
   useEffect(() => {
     if (isError) {
-      alert("사전 예약이 실패하였습니다.");
+      alert("사전예약에 실패하였습니다.");
       setReserveInfo({
         ...reserveInfo,
         name: "",
@@ -73,7 +77,7 @@ export const HomePage = () => {
   return (
     <ReactFullpage
       //fullpage options
-      licenseKey={"YOUR_KEY_HERE"}
+      licenseKey={process.env.REACT_APP_FULLPAGE_KEY}
       scrollingSpeed={700} /* Options here */
       anchors={[
         "1",
@@ -99,6 +103,14 @@ export const HomePage = () => {
       render={({ state, fullpageApi }) => {
         const handleToReserve = () => {
           fullpageApi.moveTo("12", 0);
+        };
+        const handleOpen = () => {
+          setIsOpen(true);
+          fullpageApi.setAllowScrolling(false);
+        };
+        const handleClose = () => {
+          setIsOpen(false);
+          fullpageApi.setAllowScrolling(true);
         };
         return (
           <ReactFullpage.Wrapper>
@@ -189,9 +201,11 @@ export const HomePage = () => {
               </MainContainer>
             </div>
             <div className={"section"}>
-              <MainContainer>
-                <Footer />
-              </MainContainer>
+              <FooterContainer
+                isOpen={isOpen}
+                handleOpen={handleOpen}
+                handleClose={handleClose}
+              />
             </div>
           </ReactFullpage.Wrapper>
         );

@@ -19,6 +19,7 @@ const useStyles = makeStyles({
   },
   title: {
     fontSize: "48px",
+    paddingTop: "20px",
     "@media (max-width: 600px)": {
       fontSize: "20px",
       paddingTop: "20px",
@@ -52,14 +53,14 @@ export const Section4 = () => {
   const classes = useStyles();
   return (
     <Grid className={classes.root} container>
-      <Fade duration={1500}>
-        <Grid className={classes.titleContainer} item sm={12}>
+      <Grid className={classes.titleContainer} item sm={12}>
+        <Fade duration={1500}>
           <div className={classes.title}>{"[안정성]"}</div>
-        </Grid>
-      </Fade>
+        </Fade>
+      </Grid>
       <Grid className={classes.img} item sm={7}>
         <Fade duration={2000}>
-          <img className={classes.img} src={Money} />
+          <img className={classes.img} src={Money} alt={""} />
         </Fade>
       </Grid>
       <Grid className={classes.text} item sm={5}>
