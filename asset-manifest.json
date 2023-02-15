@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/kim-limit/youdongsan-front.git/static/css/main.bbec2dbe.css",
+    "main.js": "/kim-limit/youdongsan-front.git/static/js/main.9ad8c763.js",
+    "static/js/787.93b32b4b.chunk.js": "/kim-limit/youdongsan-front.git/static/js/787.93b32b4b.chunk.js",
+    "static/media/AppImg1.png": "/kim-limit/youdongsan-front.git/static/media/AppImg1.8c0a5a8c6b07c372c1ac.png",
+    "static/media/AppImg2.png": "/kim-limit/youdongsan-front.git/static/media/AppImg2.d511d4b809d54ac2d705.png",
+    "static/media/RightLoad.png": "/kim-limit/youdongsan-front.git/static/media/RightLoad.a2d9884cdffd633d0f52.png",
+    "static/media/LeftLoad.png": "/kim-limit/youdongsan-front.git/static/media/LeftLoad.edae52587072b18bf100.png",
+    "static/media/Graph.png": "/kim-limit/youdongsan-front.git/static/media/Graph.22d8300cb749c0a51797.png",
+    "static/media/Money.png": "/kim-limit/youdongsan-front.git/static/media/Money.d2516db5c7814a5b1a66.png",
+    "static/media/AppImg5.png": "/kim-limit/youdongsan-front.git/static/media/AppImg5.cbf0c6d1cf5a89454d85.png",
+    "static/media/AppImg3.png": "/kim-limit/youdongsan-front.git/static/media/AppImg3.7a28768149c4d794eacb.png",
+    "static/media/AppImg6.png": "/kim-limit/youdongsan-front.git/static/media/AppImg6.ece03ec4739a5912bbc6.png",
+    "static/media/AppImg4.png": "/kim-limit/youdongsan-front.git/static/media/AppImg4.cdc6c4992130e9dee221.png",
+    "static/media/AppImg7.png": "/kim-limit/youdongsan-front.git/static/media/AppImg7.90d663da832f7ecc7357.png",
+    "static/media/AppImg8.png": "/kim-limit/youdongsan-front.git/static/media/AppImg8.2714e7947a5bf8966fa7.png",
+    "static/media/Logo.png": "/kim-limit/youdongsan-front.git/static/media/Logo.6afc703248ff11406b3e.png",
+    "static/media/Insta.svg": "/kim-limit/youdongsan-front.git/static/media/Insta.dd3339970e8fc34c818e78f4e413f33c.svg",
+    "static/media/Menu.svg": "/kim-limit/youdongsan-front.git/static/media/Menu.34c90d64d6b5ecee18178c10675b7f6b.svg",
+    "index.html": "/kim-limit/youdongsan-front.git/index.html",
+    "static/media/Apple.svg": "/kim-limit/youdongsan-front.git/static/media/Apple.5756a26c4d798de6fe16bf8933ef97b1.svg",
+    "static/media/PlayStore.svg": "/kim-limit/youdongsan-front.git/static/media/PlayStore.1cd86df0dc94c4b4ce5e7d63cae2b772.svg",
+    "static/media/Close.svg": "/kim-limit/youdongsan-front.git/static/media/Close.3700433282fc225dbce6d78fa9d63008.svg",
+    "main.bbec2dbe.css.map": "/kim-limit/youdongsan-front.git/static/css/main.bbec2dbe.css.map",
+    "main.9ad8c763.js.map": "/kim-limit/youdongsan-front.git/static/js/main.9ad8c763.js.map",
+    "787.93b32b4b.chunk.js.map": "/kim-limit/youdongsan-front.git/static/js/787.93b32b4b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bbec2dbe.css",
+    "static/js/main.9ad8c763.js"
+  ]
+}
